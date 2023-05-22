@@ -1,0 +1,701 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Heptad.Dick.WinSystem.KeyboardMouse.UI</name>
+    </assembly>
+    <members>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.UI.Cursor.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.UI.Cursor.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.UI.Cursor.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.UI.CursorNativeMethods.GetDC(System.IntPtr)">
+            <summary>
+            	<see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.UI.CursorNativeMethods.GetDC(System.IntPtr)"/> 函數為指定窗口的客戶區或整個屏幕檢索設備上下文 (DC) 的句柄
+            	<para>
+            		可以在後續的 GDI 函數中使用返回的句柄來繪製 DC
+            	</para>
+            	<para>
+            		設備上下文是一個不透明的數據結構, 其值由 GDI 在內部使用
+            	</para>
+            </summary>
+            
+            <param name="hWnd">
+            	設備的句柄, 值建議給定 <see cref="F:System.IntPtr.Zero"/>
+            </param>
+            
+            <returns>
+            	<para>
+            		如果函數成功, 則返回值是指定窗口客戶區的 DC 句柄
+            	</para>
+            	<para>
+            		如果函數失敗, 則返回值為NULL
+            	</para>
+            </returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.UI.CursorNativeMethods.GetPixel(System.IntPtr,System.Int32,System.Int32)">
+            <summary>
+            	<see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.UI.CursorNativeMethods.GetPixel(System.IntPtr,System.Int32,System.Int32)"/> 函數檢索指定坐標處像素的紅, 綠, 藍 (RGB) 顏色值
+            </summary>
+            
+            <param name="hDC">
+            	設備上下文的句柄, 即是 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.UI.CursorNativeMethods.GetDC(System.IntPtr)"/> 的返回值
+            </param>
+            
+            <param name="x">
+            	要檢查的像素的 x 坐標
+            </param>
+            
+            <param name="y">
+            	要檢查的像素的 y 坐標
+            </param>
+            
+            <returns></returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.UI.CursorMethods.HandleColorByRGB(System.UInt32)">
+            <summary>
+            	處理RGB
+            </summary>
+            <param name="pixel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.UI.KeypadType">
+            <summary>
+            	鍵盤的狀態
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.UI.KeypadType.NoSuch">
+            <summary>
+            	沒有此按鍵
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.UI.KeypadType.Down">
+            <summary>
+            	按下中
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.UI.KeypadType.Up">
+            <summary>
+            	鬆開中
+            </summary>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad">
+            <summary>
+            	鍵盤介面
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.KeyPadPlayer">
+            <summary>
+            	鍵盤音效播放器
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.OnPlayer">
+            <summary>
+            	鍵盤鎖定按鈕開啟音效播放器
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.OffPlayer">
+            <summary>
+            	鍵盤鎖定按鈕關閉音效播放器
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.OnSignalPlayer">
+            <summary>
+            	鍵盤音效按鈕開啟音效播放器
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.OffSignalPlayer">
+            <summary>
+            	鍵盤音效按鈕關閉音效播放器
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.CapsLockSwit">
+            <summary>
+            	是否啟用大寫鎖定
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.ScrollLockSwit">
+            <summary>
+            	是否啟用滾動鎖定
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.NumLockSwit">
+            <summary>
+            	是否啟用數字鎖定
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.CtrlDown">
+            <summary>
+            	是否按下Ctrl鍵
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.AltDown">
+            <summary>
+            	是否按下Alt鍵
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.ShiftDown">
+            <summary>
+            	是否按下Shift鍵
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.IsToggle">
+            <summary>
+            	是否啟動切換式鍵盤
+            	<para>
+            		啟動時: 觸發鍵盤後直到再次點擊時鬆開
+            	</para>
+            	<para>
+            		關閉時: 觸發鍵盤後鬆開
+            	</para>
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.IsOpenSound">
+            <summary>
+            	是否啟用鍵盤音效
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.IsOpenDetect">
+            <summary>
+            	是否啟用鍵盤檢測
+            </summary>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.#ctor">
+            <summary>
+            	鍵盤介面
+            </summary>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.KeyInfo(System.Windows.Forms.Keys)">
+            <summary>
+            	檢測鍵盤狀態
+            </summary>
+            
+            <param name="key">
+            	按鍵
+            </param>
+            
+            <returns>
+            	<see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.UI.KeypadType"/> 的狀態
+            </returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.SettingsDetect">
+            <summary>
+            	設定檢測開關
+            	<para>
+            		依據 <see cref="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.IsOpenDetect"/> 變更
+            	</para>
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.components">
+            <summary> 
+            設計工具所需的變數。
+            </summary>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.Dispose(System.Boolean)">
+            <summary> 
+            清除任何使用中的資源。
+            </summary>
+            <param name="disposing">如果應該處置受控資源則為 true，否則為 false。</param>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.InitializeComponent">
+            <summary> 
+            此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改
+            這個方法的內容。
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.UI.Mouse.MousePlayer">
+            <summary>
+            	鍵盤音效播放器
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.UI.Mouse.OnPlayer">
+            <summary>
+            	按鈕開啟音效播放器
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.UI.Mouse.OffPlayer">
+            <summary>
+            	按鈕關閉音效播放器
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.UI.Mouse.OnSignalPlayer">
+            <summary>
+            	鍵盤音效按鈕開啟音效播放器
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.UI.Mouse.OffSignalPlayer">
+            <summary>
+            	鍵盤音效按鈕關閉音效播放器
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.UI.Mouse.X">
+            <summary>
+            	鼠標 X 座標
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.UI.Mouse.Y">
+            <summary>
+            	鼠標 Y 座標
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Mouse.IsToggle">
+            <summary>
+            	是否啟動切換式鼠標
+            	<para>
+            		啟動時: 觸發鼠標後直到再次點擊時鬆開
+            	</para>
+            	<para>
+            		關閉時: 觸發鼠標後鬆開
+            	</para>
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Mouse.IsOpenSound">
+            <summary>
+            	是否啟用鼠標音效
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Mouse.IsOpenDetect">
+            <summary>
+            	是否啟用鼠標檢測
+            </summary>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.UI.Mouse.SettingsDetect">
+            <summary>
+            	設定檢測開關
+            	<para>
+            		依據 <see cref="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Mouse.IsOpenDetect"/> 變更
+            	</para>
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.UI.Mouse.components">
+            <summary> 
+            設計工具所需的變數。
+            </summary>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.UI.Mouse.Dispose(System.Boolean)">
+            <summary> 
+            清除任何使用中的資源。
+            </summary>
+            <param name="disposing">如果應該處置受控資源則為 true，否則為 false。</param>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.UI.Mouse.InitializeComponent">
+            <summary> 
+            此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改
+            這個方法的內容。
+            </summary>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources">
+            <summary>
+              用於查詢當地語系化字串等的強類型資源類別。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.ResourceManager">
+            <summary>
+              傳回這個類別使用的快取的 ResourceManager 執行個體。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Culture">
+            <summary>
+              覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+              使用這個強類型資源類別的資源查閱。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Arrow_Down">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Arrow_Down_Red">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Arrow_Left">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Arrow_Left_Red">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Arrow_LeftDown">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Arrow_LeftDown_Red">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Arrow_LeftUp">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Arrow_LeftUp_Red">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Arrow_Right">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Arrow_Right_Red">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Arrow_RightDown">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Arrow_RightDown_Red">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Arrow_RightUp">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Arrow_RightUp_Red">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Arrow_Up">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Arrow_Up_Red">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.click">
+            <summary>
+              查詢類似 System.IO.MemoryStream 的類型 System.IO.UnmanagedMemoryStream 當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Down">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Height_Down">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Height_Up">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Lamp_Green">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Lamp_Grey">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Lamp_Red">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.mouse">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Mouse_Left">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Mouse_Middle">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Mouse_Right">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Mouse_Wheel_Back">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Mouse_Wheel_Forward">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Mouse_XButton1">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Mouse_XButton2">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Off">
+            <summary>
+              查詢類似 System.IO.MemoryStream 的類型 System.IO.UnmanagedMemoryStream 當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.OFF_Button">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.On">
+            <summary>
+              查詢類似 System.IO.MemoryStream 的類型 System.IO.UnmanagedMemoryStream 當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.ON_Button">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.press">
+            <summary>
+              查詢類似 System.IO.MemoryStream 的類型 System.IO.UnmanagedMemoryStream 當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Signal_Off_Music">
+            <summary>
+              查詢類似 System.IO.MemoryStream 的類型 System.IO.UnmanagedMemoryStream 當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Signal_On_Music">
+            <summary>
+              查詢類似 System.IO.MemoryStream 的類型 System.IO.UnmanagedMemoryStream 當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.SignalOff">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.SignalOn">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Up">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Width1_Down">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Width1_Up">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Width2_Down">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Width2_Up">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Width3_Down">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Width3_Up">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Width4_Down">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Width4_Up">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Width5_Down">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Width5_Up">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Width6_Down">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.Width6_Up">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad">
+            <summary>
+            	九宮格數字鍵控件
+            </summary>
+            <summary>
+            	九宮格數字鍵控件
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.IsNumLock">
+            <summary>
+            	是否啟用 Num Lock 數字鎖定
+            </summary>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.#ctor">
+            <summary>
+            	九宮格數字鍵控件
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.components">
+            <summary> 
+            設計工具所需的變數。
+            </summary>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.Dispose(System.Boolean)">
+            <summary> 
+            清除任何使用中的資源。
+            </summary>
+            <param name="disposing">如果應該處置受控資源則為 true，否則為 false。</param>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.InitializeComponent">
+            <summary> 
+            此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改
+            這個方法的內容。
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.Num0">
+            <summary>
+            	數字鍵 0
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.Num1">
+            <summary>
+            	數字鍵 1
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.Num2">
+            <summary>
+            	數字鍵 2
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.Num3">
+            <summary>
+            	數字鍵 3
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.Num4">
+            <summary>
+            	數字鍵 4
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.Num5">
+            <summary>
+            	數字鍵 5
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.Num6">
+            <summary>
+            	數字鍵 6
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.Num7">
+            <summary>
+            	數字鍵 7
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.Num8">
+            <summary>
+            	數字鍵 8
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.Num9">
+            <summary>
+            	數字鍵 9
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.NumDot">
+            <summary>
+            	數字鍵 .
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.NumPlus">
+            <summary>
+            	數字鍵 +
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.NumMinus">
+            <summary>
+            	數字鍵 -
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.NumMultiply">
+            <summary>
+            	數字鍵 *
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.NumDivide">
+            <summary>
+            	數字鍵 /
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.NumLock">
+            <summary>
+            	數字鍵 數字鎖定鍵
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.NumEnter">
+            <summary>
+            	數字鍵 Enter
+            </summary>
+        </member>
+    </members>
+</doc>

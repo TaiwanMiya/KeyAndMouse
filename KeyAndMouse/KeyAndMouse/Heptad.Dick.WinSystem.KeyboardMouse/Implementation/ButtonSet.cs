@@ -1,0 +1,29 @@
+﻿using System.Windows.Forms;
+
+namespace Heptad.Dick.WinSystem.KeyboardMouse.Implementation
+{
+    internal class ButtonSet
+    {
+        private MouseButtons m_Set;
+
+        public ButtonSet()
+        {
+            m_Set = MouseButtons.None;
+        }
+
+        public void Add(MouseButtons element)
+        {
+            m_Set |= element;
+        }
+
+        public void Remove(MouseButtons element)
+        {
+            m_Set &= ~element;
+        }
+
+        public bool Contains(MouseButtons element)
+        {
+            return (m_Set & element) != MouseButtons.None;
+        }
+    }
+}

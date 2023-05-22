@@ -1,0 +1,56 @@
+excpt.h
+異常處理
+
+stdarg.h
+變量參數函數, 標準 C 頭文件
+
+windef.h
+各種宏和類型
+
+winnt.h
+各種宏和類型, 只適用於Windows NT
+
+basetsd.h
+各種類型
+
+guiddef.h
+GUID類型
+
+ctype.h
+字符分類, 標準 C 標頭檔
+
+string.h
+字符串和緩衝區, 標準 C 標頭檔
+
+winbase.h
+kernel32.dll 和 advapi32.dll, 內核服務 (例如CreateProcessAsUser 函數) , 訪問控制 (例如AdjustTokenGroups 函數)
+
+winerror.h
+Windows 錯誤代碼
+
+wingdi.h
+GDI (圖形設備接口)
+
+winuser.h
+user32.dll ：用戶服務
+
+winnls.h
+NLS (本地語言支持)
+
+wincon.h
+控制台服務
+
+winver.h
+版本信息
+
+winreg.h
+Windows 註冊表
+
+winnetwk.h
+WNet (Windows 網路)
+
+winsvc.h
+Windows 服務和SCM (服務控制管理器)
+
+imm.h
+IME (輸入法與編輯器)

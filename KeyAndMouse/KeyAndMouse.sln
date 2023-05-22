@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyAndMouse", "KeyAndMouse\KeyAndMouse.csproj", "{EABEB6A4-6AF0-4005-8682-26307381160A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5A86C554-84A4-4A67-B967-7010D716FB44}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyAndMouse.UI", "KeyAndMouse.UI\KeyAndMouse.UI.csproj", "{66F69E66-FD93-4C53-8784-1F94289D508E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EABEB6A4-6AF0-4005-8682-26307381160A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EABEB6A4-6AF0-4005-8682-26307381160A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EABEB6A4-6AF0-4005-8682-26307381160A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EABEB6A4-6AF0-4005-8682-26307381160A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66F69E66-FD93-4C53-8784-1F94289D508E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66F69E66-FD93-4C53-8784-1F94289D508E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66F69E66-FD93-4C53-8784-1F94289D508E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66F69E66-FD93-4C53-8784-1F94289D508E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8DD5AC6-F3F3-4240-9202-ADE1EC117DD9}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1 @@
+﻿using System;  namespace Heptad.Dick.WinSystem.KeyboardMouse {     /// <summary>     ///     <para>     ///         ※ 推薦使用 ※     ///     </para>     ///     <para>     ///         提供鍵盤和鼠標事件     ///     </para>     /// </summary>     public interface IKeyboardMouseEvents : IKeyboardEvents, IMouseEvents, IDisposable     {     } }

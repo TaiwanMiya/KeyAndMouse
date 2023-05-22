@@ -1,0 +1,40 @@
+C:\Users\yup89\source\repos\KeyAndMouse\KeyAndMouse\bin\Debug\KeyAndMouse.dll
+C:\Users\yup89\source\repos\KeyAndMouse\KeyAndMouse\bin\Debug\KeyAndMouse.pdb
+C:\Users\yup89\source\repos\KeyAndMouse\KeyAndMouse\obj\Debug\KeyAndMouse.csproj.CoreCompileInputs.cache
+C:\Users\yup89\source\repos\KeyAndMouse\KeyAndMouse\obj\Debug\KeyAndMouse.dll
+C:\Users\yup89\source\repos\KeyAndMouse\KeyAndMouse\obj\Debug\KeyAndMouse.pdb
+C:\Users\yup89\source\repos\KeyAndMouse\KeyAndMouse\bin\Debug\KeyAndMouse.xml
+C:\Users\yup89\source\repos\KeyAndMouse\KeyAndMouse\obj\Debug\KeyAndMouse.csproj.AssemblyReference.cache
+C:\Users\yup89\Desktop\KeyAndMouse\KeyAndMouse\obj\Debug\KeyAndMouse.csproj.AssemblyReference.cache
+C:\Users\yup89\Desktop\KeyAndMouse\KeyAndMouse\obj\Debug\KeyAndMouse.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\KeyAndMouse\KeyAndMouse\obj\Debug\KeyAndMouse.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\KeyAndMouse\KeyAndMouse\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.xml
+C:\Users\user\Desktop\KeyAndMouse\KeyAndMouse\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.dll
+C:\Users\user\Desktop\KeyAndMouse\KeyAndMouse\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.pdb
+C:\Users\user\Desktop\KeyAndMouse\KeyAndMouse\obj\Debug\Heptad.Dick.WinSystem.KeyboardMouse.dll
+C:\Users\user\Desktop\KeyAndMouse\KeyAndMouse\obj\Debug\Heptad.Dick.WinSystem.KeyboardMouse.pdb
+C:\Users\yup89\Desktop\KeyAndMouse\KeyAndMouse\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.xml
+C:\Users\yup89\Desktop\KeyAndMouse\KeyAndMouse\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.dll
+C:\Users\yup89\Desktop\KeyAndMouse\KeyAndMouse\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.pdb
+C:\Users\yup89\Desktop\KeyAndMouse\KeyAndMouse\obj\Debug\Heptad.Dick.WinSystem.KeyboardMouse.dll
+C:\Users\yup89\Desktop\KeyAndMouse\KeyAndMouse\obj\Debug\Heptad.Dick.WinSystem.KeyboardMouse.pdb
+C:\Users\yup89\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.xml
+C:\Users\yup89\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.dll
+C:\Users\yup89\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.pdb
+C:\Users\yup89\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\obj\Debug\KeyAndMouse.csproj.CoreCompileInputs.cache
+C:\Users\yup89\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\obj\Debug\Heptad.Dick.WinSystem.KeyboardMouse.dll
+C:\Users\yup89\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\obj\Debug\Heptad.Dick.WinSystem.KeyboardMouse.pdb
+C:\Users\user\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\obj\Debug\KeyAndMouse.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\obj\Debug\Heptad.Dick.WinSystem.KeyboardMouse.dll
+C:\Users\user\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\obj\Debug\Heptad.Dick.WinSystem.KeyboardMouse.pdb
+C:\Users\user\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.xml
+C:\Users\user\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.dll
+C:\Users\user\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.pdb
+C:\Users\user\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\obj\Debug\KeyAndMouse.csproj.CoreCompileInputs.cache
+C:\Users\CW5470\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.xml
+C:\Users\CW5470\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.dll
+C:\Users\CW5470\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.pdb
+C:\Users\CW5470\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\obj\Debug\KeyAndMouse.csproj.AssemblyReference.cache
+C:\Users\CW5470\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\obj\Debug\KeyAndMouse.csproj.CoreCompileInputs.cache
+C:\Users\CW5470\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\obj\Debug\Heptad.Dick.WinSystem.KeyboardMouse.dll
+C:\Users\CW5470\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\obj\Debug\Heptad.Dick.WinSystem.KeyboardMouse.pdb

@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{66F69E66-FD93-4C53-8784-1F94289D508E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Heptad.Dick.WinSystem.KeyboardMouse.UI</RootNamespace>
+    <AssemblyName>Heptad.Dick.WinSystem.KeyboardMouse.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.UI.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cursor\Cursor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursor\Cursor.Designer.cs">
+      <DependentUpon>Cursor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursor\CursorClass\CursorMethods.cs" />
+    <Compile Include="Hooks\Hooks.cs" />
+    <Compile Include="Hooks\IHooks.cs" />
+    <Compile Include="Keyboard\Keypad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Keyboard\Keypad.Designer.cs">
+      <DependentUpon>Keypad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Keyboard\KeypadClass\KeypadMethods.cs" />
+    <Compile Include="Keyboard\KeypadClass\KeypadNames.cs" />
+    <Compile Include="Mouse\Mouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mouse\Mouse.Designer.cs">
+      <DependentUpon>Mouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mouse\MouseClass\MouseMethods.cs" />
+    <Compile Include="Numeric\NumericKeypad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Numeric\NumericKeypad.Designer.cs">
+      <DependentUpon>NumericKeypad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Cursor\Cursor.resx">
+      <DependentUpon>Cursor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keyboard\Keypad.resx">
+      <DependentUpon>Keypad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mouse\Mouse.resx">
+      <DependentUpon>Mouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Numeric\NumericKeypad.resx">
+      <DependentUpon>NumericKeypad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Height Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Height Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lamp Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lamp Grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lamp Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OFF_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ON_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Width1 Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Width1 Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Width2 Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Width2 Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Width3 Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Width3 Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Width4 Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Width4 Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Width5 Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Width5 Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Width6 Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Width6 Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Down Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Left Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow LeftDown Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow LeftDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow LeftUp Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow LeftUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Right Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow RightDown Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow RightDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow RightUp Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow RightUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Up Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mouse Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mouse Middle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mouse Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mouse Wheel Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mouse Wheel Forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mouse XButton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mouse XButton2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Off.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\On.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\press.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KeyAndMouse\KeyAndMouse.csproj">
+      <Project>{eabeb6a4-6af0-4005-8682-26307381160a}</Project>
+      <Name>KeyAndMouse</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Signal On Music.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Signal Off Music.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignalOutputOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignalOutputOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignalOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignalOff.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

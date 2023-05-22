@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EABEB6A4-6AF0-4005-8682-26307381160A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Heptad.Dick.WinSystem.KeyboardMouse</RootNamespace>
+    <AssemblyName>Heptad.Dick.WinSystem.KeyboardMouse</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.xml</DocumentationFile>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>km_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Heptad Dick.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Code\KeyboardCode.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Code\MouseCode.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\HotKeys\HotKeyArgs.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\HotKeys\HotKeySet.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\HotKeys\HotKeySetCollection.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\HotKeys\HotKeySetsListener.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\WinUserNativeMethods.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\KeyboardScript.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\MouseScript.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Combination.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Hook.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\IKeyboardEvents.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\IKeyboardMouseEvents.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\IMouseEvents.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Implementation\AppEventFacade.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Implementation\AppKeyListener.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Implementation\AppMouseListener.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Implementation\BaseListener.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Implementation\ButtonSet.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Implementation\Callback.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Implementation\Chord.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Implementation\EventFacade.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Implementation\GlobalEventFacade.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Implementation\GlobalKeyListener.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Implementation\GlobalMouseListener.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Implementation\KeyboardState.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Implementation\KeyListener.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Implementation\KeysExtensions.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Implementation\MouseListener.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Implementation\Subscribe.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\KeyCombinationExtensions.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\KeyDownTxtEventArgs.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\KeyEventArgsExt.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\KeyPressEventArgsExt.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\MouseEventExtArgs.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Sequence.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\SequenceBase.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\AppMouseStruct.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\CallbackData.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\HookHelper.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\HookIds.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\HookNativeMethods.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\HookProcedure.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\HookProcedureHandle.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\HookResult.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\HotkeysNativeMethods.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\KeyboardHookStruct.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\KeyboardNativeMethods.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\Messages.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\MouseNativeMethods.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\MouseStruct.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\Point.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\ThreadNativeMethods.cs" />
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Code\WMcode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="Heptad Dick.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Heptad.Dick.WinSystem.KeyboardMouse\HotKeys\ReadMe.txt" />
+    <Content Include="km_icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
