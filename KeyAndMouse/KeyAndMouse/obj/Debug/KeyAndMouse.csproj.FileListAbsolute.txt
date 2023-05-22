@@ -38,3 +38,9 @@ C:\Users\CW5470\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\obj\Debug\KeyAndMo
 C:\Users\CW5470\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\obj\Debug\KeyAndMouse.csproj.CoreCompileInputs.cache
 C:\Users\CW5470\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\obj\Debug\Heptad.Dick.WinSystem.KeyboardMouse.dll
 C:\Users\CW5470\Desktop\Heptad Csharp\KeyAndMouse\KeyAndMouse\obj\Debug\Heptad.Dick.WinSystem.KeyboardMouse.pdb
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.xml
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.dll
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.pdb
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse\obj\Debug\KeyAndMouse.csproj.CoreCompileInputs.cache
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse\obj\Debug\Heptad.Dick.WinSystem.KeyboardMouse.dll
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse\obj\Debug\Heptad.Dick.WinSystem.KeyboardMouse.pdb

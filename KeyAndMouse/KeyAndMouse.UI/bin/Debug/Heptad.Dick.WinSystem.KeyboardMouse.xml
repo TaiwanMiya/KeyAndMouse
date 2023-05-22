@@ -2256,92 +2256,182 @@
             <see cref="T:System.Windows.Forms.Keys"/> 的代表值
             </summary>
         </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.SHIFT">
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.L_SHIFT">
             <summary>
-            Shift 鍵 結構
+            左 Shift 鍵 結構
             </summary>
         </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.SHIFT.name">
-            <summary>
-            字節
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.SHIFT.shift_name">
-            <summary>
-            shift 按下時的字節
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.SHIFT.virtualcode">
-            <summary>
-            虛擬鍵值
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.SHIFT.scancode">
-            <summary>
-            鍵盤掃描碼
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.SHIFT.keys">
-            <summary>
-            <see cref="T:System.Windows.Forms.Keys"/> 的代表值
-            </summary>
-        </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.CTRL">
-            <summary>
-            Ctrl 鍵 結構
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.CTRL.name">
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.L_SHIFT.name">
             <summary>
             字節
             </summary>
         </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.CTRL.shift_name">
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.L_SHIFT.shift_name">
             <summary>
             shift 按下時的字節
             </summary>
         </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.CTRL.virtualcode">
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.L_SHIFT.virtualcode">
             <summary>
             虛擬鍵值
             </summary>
         </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.CTRL.scancode">
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.L_SHIFT.scancode">
             <summary>
             鍵盤掃描碼
             </summary>
         </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.CTRL.keys">
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.L_SHIFT.keys">
             <summary>
             <see cref="T:System.Windows.Forms.Keys"/> 的代表值
             </summary>
         </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.ALT">
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.R_SHIFT">
+            <summary>
+            右 Shift 鍵 結構
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.R_SHIFT.name">
+            <summary>
+            字節
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.R_SHIFT.shift_name">
+            <summary>
+            shift 按下時的字節
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.R_SHIFT.virtualcode">
+            <summary>
+            虛擬鍵值
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.R_SHIFT.scancode">
+            <summary>
+            鍵盤掃描碼
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.R_SHIFT.keys">
+            <summary>
+            <see cref="T:System.Windows.Forms.Keys"/> 的代表值
+            </summary>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.L_CTRL">
+            <summary>
+            左 Ctrl 鍵 結構
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.L_CTRL.name">
+            <summary>
+            字節
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.L_CTRL.shift_name">
+            <summary>
+            shift 按下時的字節
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.L_CTRL.virtualcode">
+            <summary>
+            虛擬鍵值
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.L_CTRL.scancode">
+            <summary>
+            鍵盤掃描碼
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.L_CTRL.keys">
+            <summary>
+            <see cref="T:System.Windows.Forms.Keys"/> 的代表值
+            </summary>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.R_CTRL">
+            <summary>
+            右 Ctrl 鍵 結構
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.R_CTRL.name">
+            <summary>
+            字節
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.R_CTRL.shift_name">
+            <summary>
+            shift 按下時的字節
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.R_CTRL.virtualcode">
+            <summary>
+            虛擬鍵值
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.R_CTRL.scancode">
+            <summary>
+            鍵盤掃描碼
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.R_CTRL.keys">
+            <summary>
+            <see cref="T:System.Windows.Forms.Keys"/> 的代表值
+            </summary>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.L_ALT">
             <summary>
             Alt 鍵 結構
             </summary>
         </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.ALT.name">
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.L_ALT.name">
             <summary>
             字節
             </summary>
         </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.ALT.shift_name">
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.L_ALT.shift_name">
             <summary>
             shift 按下時的字節
             </summary>
         </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.ALT.virtualcode">
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.L_ALT.virtualcode">
             <summary>
             虛擬鍵值
             </summary>
         </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.ALT.scancode">
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.L_ALT.scancode">
             <summary>
             鍵盤掃描碼
             </summary>
         </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.ALT.keys">
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.L_ALT.keys">
+            <summary>
+            <see cref="T:System.Windows.Forms.Keys"/> 的代表值
+            </summary>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.R_ALT">
+            <summary>
+            Alt 鍵 結構
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.R_ALT.name">
+            <summary>
+            字節
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.R_ALT.shift_name">
+            <summary>
+            shift 按下時的字節
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.R_ALT.virtualcode">
+            <summary>
+            虛擬鍵值
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.R_ALT.scancode">
+            <summary>
+            鍵盤掃描碼
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode.R_ALT.keys">
             <summary>
             <see cref="T:System.Windows.Forms.Keys"/> 的代表值
             </summary>

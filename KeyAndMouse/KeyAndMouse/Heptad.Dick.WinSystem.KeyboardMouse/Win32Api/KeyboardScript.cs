@@ -201,12 +201,12 @@ namespace Heptad.Dick.WinSystem.KeyboardMouse.Win32Api
                             keybd_event(Keychars.DO[i][0], Keychars.DO[i][1], 2, 0);
                             break;
                         case 1:
-                            keybd_event(Keycode.SHIFT.virtualcode, Keycode.SHIFT.scancode, 0, 0);
-                            keybd_event(Keycode.SHIFT.virtualcode, Keycode.SHIFT.scancode, 2, 0);
+                            keybd_event(Keycode.L_SHIFT.virtualcode, Keycode.L_SHIFT.scancode, 0, 0);
+                            keybd_event(Keycode.L_SHIFT.virtualcode, Keycode.L_SHIFT.scancode, 2, 0);
                             keybd_event(Keychars.DO[i][0], Keychars.DO[i][1], 0, 0);
                             keybd_event(Keychars.DO[i][0], Keychars.DO[i][1], 2, 0);
-                            keybd_event(Keycode.SHIFT.virtualcode, Keycode.SHIFT.scancode, 0, 0);
-                            keybd_event(Keycode.SHIFT.virtualcode, Keycode.SHIFT.scancode, 2, 0);
+                            keybd_event(Keycode.L_SHIFT.virtualcode, Keycode.L_SHIFT.scancode, 0, 0);
+                            keybd_event(Keycode.L_SHIFT.virtualcode, Keycode.L_SHIFT.scancode, 2, 0);
                             break;
                         case 2:
                             keybd_event(Keycode.CAPS.virtualcode, Keycode.CAPS.scancode, 0, 0);

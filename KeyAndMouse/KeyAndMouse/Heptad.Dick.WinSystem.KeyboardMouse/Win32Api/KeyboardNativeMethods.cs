@@ -6,7 +6,75 @@ using Heptad.Dick.WinSystem.KeyboardMouse.Implementation;
 
 namespace Heptad.Dick.WinSystem.KeyboardMouse.Win32Api
 {
-    
+    /// <summary>
+    ///     映射虛擬鍵 的 <see href="uCode"/> 類型
+    ///     <para>給 <see cref="KeyboardNativeMethods.MapVirtualKeyEx"/>, <see cref="KeyboardNativeMethods.MapVirtualKey"/> 使用</para>
+    /// </summary>
+    public struct MapType
+    {
+        /// <summary>
+        ///     <para>
+        ///         uCode參數是一個虛擬鍵碼, 被轉換成掃描碼
+        ///     </para>
+        ///     <para>
+        ///         如果是不區分左右鍵的虛擬鍵碼, 則返回左邊的掃描碼
+        ///     </para>
+        ///     <para>
+        ///         如果轉換失敗, 該函數返回 0
+        ///     </para>
+        /// </summary>
+        public const int MAPVK_VK_TO_VSC = 0;
+
+        /// <summary>
+        ///     <para>
+        ///         uCode參數是一個掃描碼, 被翻譯成一個不區分左右鍵的虛擬鍵碼
+        ///     </para>
+        ///     <para>
+        ///         如果轉換失敗, 該函數返回 0
+        ///     </para>
+        /// </summary>
+        public const int MAPVK_VSC_TO_VK = 1;
+
+        /// <summary>
+        ///     <para>
+        ///         uCode參數是一個虛擬鍵碼, 在返回值的低位字中被轉換成一個未移位的字符值
+        ///     </para>
+        ///     <para>
+        ///         通過設置返回值的最高位來指示死鍵(變音符號)
+        ///     </para>
+        ///     <para>
+        ///         如果轉換失敗, 該函數返回 0
+        ///     </para>
+        /// </summary>
+        public const int MAPVK_VK_TO_CHAR = 2;
+
+        /// <summary>
+        ///     <para>
+        ///         uCode參數是一個掃描碼, 被轉換成一個虛擬鍵碼, 用於區分左手鍵和右手鍵
+        ///     </para>
+        ///     <para>
+        ///         如果沒有轉換, 該函數返回 0
+        ///     </para>
+        /// </summary>
+        public const int MAPVK_VSC_TO_VK_EX = 3;
+
+        /// <summary>
+        ///     <para>
+        ///         uCode參數是一個虛擬鍵碼，並被轉換為掃描碼
+        ///     </para>
+        ///     <para>
+        ///         如果是不區分左右鍵的虛擬鍵碼, 則返回左手掃碼
+        ///     </para>
+        ///     <para>
+        ///         如果掃描碼是擴展掃描碼, 則uCode值的高字節可以包含0xe0或0xe1來指定擴展掃描碼
+        ///     </para>
+        ///     <para>
+        ///         如果沒有轉換, 該函數返回 0
+        ///     </para>
+        /// </summary>
+        public const int MAPVK_VK_TO_VSC_EX = 4;
+    }
+
     /// <summary>
     ///     底層鍵盤方法
     /// </summary>
@@ -481,7 +549,7 @@ namespace Heptad.Dick.WinSystem.KeyboardMouse.Win32Api
         /// </param>
         /// 
         /// <param name="uMapType">
-        ///     [in] 要執行的轉換, 這個參數的值取決於 <see href="uCode"/> 參數的值
+        ///     [in] 要執行的轉換, 這個參數的值取決於 <see cref="MapType"/> 參數的值
         /// </param>
         /// 
         /// <param name="dwhkl">
@@ -499,7 +567,7 @@ namespace Heptad.Dick.WinSystem.KeyboardMouse.Win32Api
         /// </summary>
         /// 
         /// <param name="uCode">
-        ///     [in] 鍵的虛擬鍵碼或掃描碼, 該值的解釋方式取決於 <see href="uMapType"/> 參數的值
+        ///     [in] 鍵的虛擬鍵碼或掃描碼, 該值的解釋方式取決於 <see cref="MapType"/> 參數的值
         /// </param>
         /// 
         /// <param name="uMapType">
@@ -534,74 +602,5 @@ namespace Heptad.Dick.WinSystem.KeyboardMouse.Win32Api
         /// </returns>
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         public static extern IntPtr GetKeyboardLayout(int dwLayout);
-
-        /// <summary>
-        ///     映射虛擬鍵 的 <see href="uCode"/> 類型
-        ///     <para>給 <see cref="MapVirtualKeyEx"/>, <see cref="MapVirtualKey"/> 使用</para>
-        /// </summary>
-        public enum MapType
-        {
-            /// <summary>
-            ///     <para>
-            ///         uCode參數是一個虛擬鍵碼, 被轉換成掃描碼
-            ///     </para>
-            ///     <para>
-            ///         如果是不區分左右鍵的虛擬鍵碼, 則返回左邊的掃描碼
-            ///     </para>
-            ///     <para>
-            ///         如果轉換失敗, 該函數返回 0
-            ///     </para>
-            /// </summary>
-            MAPVK_VK_TO_VSC,
-
-            /// <summary>
-            ///     <para>
-            ///         uCode參數是一個掃描碼, 被翻譯成一個不區分左右鍵的虛擬鍵碼
-            ///     </para>
-            ///     <para>
-            ///         如果轉換失敗, 該函數返回 0
-            ///     </para>
-            /// </summary>
-            MAPVK_VSC_TO_VK,
-
-            /// <summary>
-            ///     <para>
-            ///         uCode參數是一個虛擬鍵碼, 在返回值的低位字中被轉換成一個未移位的字符值
-            ///     </para>
-            ///     <para>
-            ///         通過設置返回值的最高位來指示死鍵(變音符號)
-            ///     </para>
-            ///     <para>
-            ///         如果轉換失敗, 該函數返回 0
-            ///     </para>
-            /// </summary>
-            MAPVK_VK_TO_CHAR,
-
-            /// <summary>
-            ///     <para>
-            ///         uCode參數是一個掃描碼, 被轉換成一個虛擬鍵碼, 用於區分左手鍵和右手鍵
-            ///     </para>
-            ///     <para>
-            ///         如果沒有轉換, 該函數返回 0
-            ///     </para>
-            /// </summary>
-            MAPVK_VSC_TO_VK_EX,
-
-            /// <summary>
-            ///     <para>
-            ///         uCode參數是一個虛擬鍵碼，並被轉換為掃描碼
-            ///     </para>
-            ///     <para>
-            ///         如果是不區分左右鍵的虛擬鍵碼, 則返回左手掃碼
-            ///     </para>
-            ///     <para>
-            ///         如果掃描碼是擴展掃描碼, 則uCode值的高字節可以包含0xe0或0xe1來指定擴展掃描碼
-            ///     </para>
-            ///     <para>
-            ///         如果沒有轉換, 該函數返回 0
-            ///     </para>
-            /// </summary>
-            MAPVK_VK_TO_VSC_EX,
-        }
     }
 }

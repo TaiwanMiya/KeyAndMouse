@@ -171,9 +171,9 @@ using Heptad.Dick.WinSystem.KeyboardMouse.Code;
 using Heptad.Dick.WinSystem.KeyboardMouse.Win32Api;
 using System.Windows.Forms;
 
-public static int ConvertFromKeyCode(Keys keycode, MapType type)
+public static int ConvertFromKeyCode(Keys keycode, int mapType)
 {
-    return KeyboardNativeMethods.MapVirtualKey((int)keycode, (int)type);
+    return KeyboardNativeMethods.MapVirtualKey((int)keycode, mapType);
 }
 ```
 
@@ -187,12 +187,12 @@ using System.Windows.Forms;
 
 public static void KeyDown(Keys keycode, byte Scancode = 0)
 {
-    KeyboardScript.keybd_event((int)keycode, Scancode, (int)keyFlags.KEYEVENTF_KEYDOWN, 0);
+    KeyboardScript.keybd_event((int)keycode, Scancode, keyFlags.KEYEVENTF_KEYDOWN, 0);
 }
 
 public static void KeyUp(Keys keycode, byte Scancode = 0)
 {
-    KeyboardScript.keybd_event((int)keycode, Scancode, (int)keyFlags.KEYEVENTF_KEYUP, 0);
+    KeyboardScript.keybd_event((int)keycode, Scancode, keyFlags.KEYEVENTF_KEYUP, 0);
 }
 ```
 

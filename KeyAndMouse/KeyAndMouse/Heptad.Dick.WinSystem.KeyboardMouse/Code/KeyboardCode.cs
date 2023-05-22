@@ -1967,9 +1967,9 @@ namespace Heptad.Dick.WinSystem.KeyboardMouse.Code
             public const Keys keys = Keys.Tab;
         }
         /// <summary>
-        /// Shift 鍵 結構
+        /// 左 Shift 鍵 結構
         /// </summary>
-        public readonly struct SHIFT
+        public readonly struct L_SHIFT
         {
             /// <summary>
 			/// 字節
@@ -1982,7 +1982,7 @@ namespace Heptad.Dick.WinSystem.KeyboardMouse.Code
             /// <summary>
 			/// 虛擬鍵值
 			/// </summary>
-            public const byte virtualcode = 0x10;
+            public const byte virtualcode = 0xA0;
             /// <summary>
 			/// 鍵盤掃描碼
 			/// </summary>
@@ -1990,12 +1990,12 @@ namespace Heptad.Dick.WinSystem.KeyboardMouse.Code
             /// <summary>
 			/// <see cref="Keys"/> 的代表值
 			/// </summary>
-            public const Keys keys = Keys.ShiftKey;
+            public const Keys keys = Keys.LShiftKey;
         }
         /// <summary>
-        /// Ctrl 鍵 結構
+        /// 右 Shift 鍵 結構
         /// </summary>
-        public readonly struct CTRL
+        public readonly struct R_SHIFT
         {
             /// <summary>
 			/// 字節
@@ -2008,7 +2008,33 @@ namespace Heptad.Dick.WinSystem.KeyboardMouse.Code
             /// <summary>
 			/// 虛擬鍵值
 			/// </summary>
-            public const byte virtualcode = 0x11;
+            public const byte virtualcode = 0xA1;
+            /// <summary>
+			/// 鍵盤掃描碼
+			/// </summary>
+            public const byte scancode = 0x36;
+            /// <summary>
+			/// <see cref="Keys"/> 的代表值
+			/// </summary>
+            public const Keys keys = Keys.RShiftKey;
+        }
+        /// <summary>
+        /// 左 Ctrl 鍵 結構
+        /// </summary>
+        public readonly struct L_CTRL
+        {
+            /// <summary>
+			/// 字節
+			/// </summary>
+            public const char name = '\0';
+            /// <summary>
+			/// shift 按下時的字節
+			/// </summary>
+            public const char shift_name = '\0';
+            /// <summary>
+			/// 虛擬鍵值
+			/// </summary>
+            public const byte virtualcode = 0xA2;
             /// <summary>
 			/// 鍵盤掃描碼
 			/// </summary>
@@ -2016,12 +2042,12 @@ namespace Heptad.Dick.WinSystem.KeyboardMouse.Code
             /// <summary>
 			/// <see cref="Keys"/> 的代表值
 			/// </summary>
-            public const Keys keys = Keys.ControlKey;
+            public const Keys keys = Keys.LControlKey;
         }
         /// <summary>
-        /// Alt 鍵 結構
+        /// 右 Ctrl 鍵 結構
         /// </summary>
-        public readonly struct ALT
+        public readonly struct R_CTRL
         {
             /// <summary>
 			/// 字節
@@ -2034,7 +2060,33 @@ namespace Heptad.Dick.WinSystem.KeyboardMouse.Code
             /// <summary>
 			/// 虛擬鍵值
 			/// </summary>
-            public const byte virtualcode = 0x12;
+            public const byte virtualcode = 0xA3;
+            /// <summary>
+			/// 鍵盤掃描碼
+			/// </summary>
+            public const byte scancode = 0x1D;
+            /// <summary>
+			/// <see cref="Keys"/> 的代表值
+			/// </summary>
+            public const Keys keys = Keys.RControlKey;
+        }
+        /// <summary>
+        /// Alt 鍵 結構
+        /// </summary>
+        public readonly struct L_ALT
+        {
+            /// <summary>
+			/// 字節
+			/// </summary>
+            public const char name = '\0';
+            /// <summary>
+			/// shift 按下時的字節
+			/// </summary>
+            public const char shift_name = '\0';
+            /// <summary>
+			/// 虛擬鍵值
+			/// </summary>
+            public const byte virtualcode = 0xA4;
             /// <summary>
 			/// 鍵盤掃描碼
 			/// </summary>
@@ -2042,7 +2094,33 @@ namespace Heptad.Dick.WinSystem.KeyboardMouse.Code
             /// <summary>
 			/// <see cref="Keys"/> 的代表值
 			/// </summary>
-            public const Keys keys = Keys.Menu;
+            public const Keys keys = Keys.LMenu;
+        }
+        /// <summary>
+        /// Alt 鍵 結構
+        /// </summary>
+        public readonly struct R_ALT
+        {
+            /// <summary>
+			/// 字節
+			/// </summary>
+            public const char name = '\0';
+            /// <summary>
+			/// shift 按下時的字節
+			/// </summary>
+            public const char shift_name = '\0';
+            /// <summary>
+			/// 虛擬鍵值
+			/// </summary>
+            public const byte virtualcode = 0xA5;
+            /// <summary>
+			/// 鍵盤掃描碼
+			/// </summary>
+            public const byte scancode = 0x38;
+            /// <summary>
+			/// <see cref="Keys"/> 的代表值
+			/// </summary>
+            public const Keys keys = Keys.RMenu;
         }
         /// <summary>
         /// CapsLock 鍵 大小寫切換鍵 結構
@@ -3386,27 +3464,27 @@ namespace Heptad.Dick.WinSystem.KeyboardMouse.Code
     /// <summary>
     /// 指定各種功能選項
     /// </summary>
-    public enum keyFlags : int
+    public struct keyFlags
     {
         /// <summary>
         /// 按鍵按下
         /// </summary>
-        KEYEVENTF_KEYDOWN       = 0x00,
+        public const int KEYEVENTF_KEYDOWN       = 0x00;
         /// <summary>
         /// 如果指定, 鍵盤掃描碼前面加入一個值為 0xE0 (224) 的前綴字節
         /// </summary>
-        KEYEVENTF_EXTENDEDKEY   = 0x01,
+        public const int KEYEVENTF_EXTENDEDKEY  = 0x01;
         /// <summary>
         /// 按鍵鬆開
         /// </summary>
-        KEYEVENTF_KEYUP         = 0x02,
+        public const int KEYEVENTF_KEYUP        = 0x02;
         /// <summary>
         /// 如果指定, 系統會合成一個VK_PACKET擊鍵, 此時虛擬鍵碼的參數必須為零
         /// </summary>
-        KEYEVENTF_UNICODE       = 0x04,
+        public const int KEYEVENTF_UNICODE      = 0x04;
         /// <summary>
         /// 如果指定, 系統會識別鍵盤掃瞄碼, 並忽略虛擬鍵碼
         /// </summary>
-        KEYEVENTF_SCANCODE      = 0x08,
+        public const int KEYEVENTF_SCANCODE     = 0x08;
     }
 }
