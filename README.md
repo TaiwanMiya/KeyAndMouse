@@ -10,6 +10,7 @@ using Heptad.Dick.WinSystem.KeyboardMouse;
 ///     Call keyboard and mouse events (global, can be detected on this windows operating system)
 /// </summary>
 public static IKeyboardMouseEvents kmEvents => Hook.GlobalEvents();
+```
 
 ## Hook detection event binding (Keyboard)
 > Heptad.Dick.WinSystem.KeyboardMouse
@@ -45,3 +46,4 @@ private void KmEvents_KeyPress(object sender, KeyPressEventArgs e)
 {
     // code when the event occurs
 }
+```
