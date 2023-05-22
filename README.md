@@ -6,10 +6,17 @@ Provide keyboard and mouse operation and detection, compatible with all windows 
 ```C#
 using Heptad.Dick.WinSystem.KeyboardMouse;
 
-/// <summary>
-///     Call keyboard and mouse events (global, can be detected on this windows operating system)
-/// </summary>
-public static IKeyboardMouseEvents kmEvents => Hook.GlobalEvents();
+#region Global events (detect windows events)
+public static IKeyboardMouseEvents g_kmEvents   => Hook.GlobalEvents();
+public static IKeyboardEvents g_kEvents         => Hook.GlobalEvents();
+public static IMouseEvents g_mEvents            => Hook.GlobalEvents();
+#endregion
+
+#region Application events (detect events of this program)
+public static IKeyboardMouseEvents a_kmEvents   => Hook.AppEvents();
+public static IKeyboardEvents a_kEvents         => Hook.AppEvents();
+public static IMouseEvents a_mEvents            => Hook.AppEvents();
+#endregion
 ```
 
 ## Hook detection event binding (Keyboard)
@@ -20,9 +27,9 @@ using Heptad.Dick.WinSystem.KeyboardMouse;
 public static void kmEnable_Keyboard(IKeyboardEvents kmEvents)
 {
     #region Keyboard events
-    kmEvents.KeyDown += kmEvents_KeyDown;
-    kmEvents.KeyUp += kmEvents_KeyUp;
-    kmEvents.KeyPress += KmEvents_KeyPress;
+    kmEvents.KeyDown    += kmEvents_KeyDown;
+    kmEvents.KeyUp      += kmEvents_KeyUp;
+    kmEvents.KeyPress   += KmEvents_KeyPress;
     kmEvents.KeyDownTxt += KmEvents_KeyDownTxt;
     #endregion
 }
@@ -55,21 +62,21 @@ using Heptad.Dick.WinSystem.KeyboardMouse;
 public static void kmEnable_Mouse(IMouseEvents kmEvents)
 {
     #region Mouse event
-    kmEvents.MouseDown += kmEvents_MouseDown;
-    kmEvents.MouseUp += kmEvents_MouseUp;
-    kmEvents.MouseMove += KmEvents_MouseMove;
-    kmEvents.MouseClick += KmEvents_MouseClick;
-    kmEvents.MouseWheel += KmEvents_MouseWheel;
-    kmEvents.MouseHWheel += KmEvents_MouseHWheel;
-    kmEvents.MouseDragStarted += KmEvents_MouseDragStarted;
-    kmEvents.MouseDoubleClick += KmEvents_MouseDoubleClick;
-    kmEvents.MouseDownExt += KmEvents_MouseDownExt;
-    kmEvents.MouseUpExt += KmEvents_MouseUpExt;
-    kmEvents.MouseMoveExt += KmEvents_MouseMoveExt;
-    kmEvents.MouseWheelExt += KmEvents_MouseWheelExt;
-    kmEvents.MouseHWheelExt += KmEvents_MouseHWheelExt;
-    kmEvents.MouseDragStartedExt += KmEvents_MouseDragStartedExt;
-    kmEvents.MouseDragFinishedExt += KmEvents_MouseDragFinishedExt;
+    kmEvents.MouseDown              += kmEvents_MouseDown;
+    kmEvents.MouseUp                += kmEvents_MouseUp;
+    kmEvents.MouseMove              += KmEvents_MouseMove;
+    kmEvents.MouseClick             += KmEvents_MouseClick;
+    kmEvents.MouseWheel             += KmEvents_MouseWheel;
+    kmEvents.MouseHWheel            += KmEvents_MouseHWheel;
+    kmEvents.MouseDragStarted       += KmEvents_MouseDragStarted;
+    kmEvents.MouseDoubleClick       += KmEvents_MouseDoubleClick;
+    kmEvents.MouseDownExt           += KmEvents_MouseDownExt;
+    kmEvents.MouseUpExt             += KmEvents_MouseUpExt;
+    kmEvents.MouseMoveExt           += KmEvents_MouseMoveExt;
+    kmEvents.MouseWheelExt          += KmEvents_MouseWheelExt;
+    kmEvents.MouseHWheelExt         += KmEvents_MouseHWheelExt;
+    kmEvents.MouseDragStartedExt    += KmEvents_MouseDragStartedExt;
+    kmEvents.MouseDragFinishedExt   += KmEvents_MouseDragFinishedExt;
     #endregion
 }
 
