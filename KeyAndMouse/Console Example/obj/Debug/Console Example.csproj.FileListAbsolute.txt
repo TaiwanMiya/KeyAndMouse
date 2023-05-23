@@ -1,0 +1,11 @@
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\Console Example\bin\Debug\Console Example.exe.config
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\Console Example\bin\Debug\Console Example.exe
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\Console Example\bin\Debug\Console Example.pdb
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\Console Example\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.dll
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\Console Example\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.pdb
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\Console Example\bin\Debug\Heptad.Dick.WinSystem.KeyboardMouse.xml
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\Console Example\obj\Debug\Console Example.csproj.AssemblyReference.cache
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\Console Example\obj\Debug\Console Example.csproj.CoreCompileInputs.cache
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\Console Example\obj\Debug\Console Example.csproj.CopyComplete
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\Console Example\obj\Debug\Console Example.exe
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\Console Example\obj\Debug\Console Example.pdb
