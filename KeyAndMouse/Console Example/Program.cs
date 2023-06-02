@@ -24,7 +24,7 @@ namespace Console_Example
 		};
 
 		public static IKeyboardMouseEvents kmEvent { get; private set; }
-		private static Action<Action> action = null;
+		private static Action<Action> action { get; set; }
 
 		static void Main(string[] args)
 		{
