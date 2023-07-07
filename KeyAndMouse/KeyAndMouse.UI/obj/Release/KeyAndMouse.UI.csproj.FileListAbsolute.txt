@@ -1,0 +1,17 @@
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse.UI\bin\Release\Heptad.Dick.WinSystem.KeyboardMouse.UI.xml
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse.UI\bin\Release\Heptad.Dick.WinSystem.KeyboardMouse.UI.dll
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse.UI\bin\Release\Heptad.Dick.WinSystem.KeyboardMouse.UI.pdb
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse.UI\bin\Release\Heptad.Dick.WinSystem.KeyboardMouse.dll
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse.UI\bin\Release\Heptad.Dick.WinSystem.KeyboardMouse.pdb
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse.UI\bin\Release\Heptad.Dick.WinSystem.KeyboardMouse.xml
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse.UI\obj\Release\KeyAndMouse.UI.csproj.AssemblyReference.cache
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse.UI\obj\Release\Heptad.Dick.WinSystem.KeyboardMouse.UI.Cursor.resources
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse.UI\obj\Release\Heptad.Dick.WinSystem.KeyboardMouse.UI.Keypad.resources
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse.UI\obj\Release\Heptad.Dick.WinSystem.KeyboardMouse.UI.Mouse.resources
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse.UI\obj\Release\Heptad.Dick.WinSystem.Interface.UserControls.Numeric.NumericKeypad.resources
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse.UI\obj\Release\Heptad.Dick.WinSystem.KeyboardMouse.UI.Properties.Resources.resources
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse.UI\obj\Release\KeyAndMouse.UI.csproj.GenerateResource.cache
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse.UI\obj\Release\KeyAndMouse.UI.csproj.CoreCompileInputs.cache
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse.UI\obj\Release\KeyAndMouse.UI.csproj.CopyComplete
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse.UI\obj\Release\Heptad.Dick.WinSystem.KeyboardMouse.UI.dll
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse.UI\obj\Release\Heptad.Dick.WinSystem.KeyboardMouse.UI.pdb

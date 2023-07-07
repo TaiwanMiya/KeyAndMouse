@@ -31,9 +31,10 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Heptad.Dick.WinSystem.KeyboardMouse.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>km_icon.ico</ApplicationIcon>
+    <ApplicationIcon>main.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
@@ -118,6 +119,7 @@
   <ItemGroup>
     <Content Include="Heptad.Dick.WinSystem.KeyboardMouse\HotKeys\ReadMe.txt" />
     <Content Include="km_icon.ico" />
+    <Content Include="main.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

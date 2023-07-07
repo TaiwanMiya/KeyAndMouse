@@ -1,7 +1,7 @@
 # KeyAndMouse
 Provide keyboard and mouse operation and detection, compatible with all windows versions and bit systems. Use dll files to perform event actions.
 
-![image](/KeyAndMouse/KeyAndMouse/bin/Debug/logo/km_icon.png)
+![image](/KeyAndMouse/logo/Main.png)
 
 ## Registration Hook Code Example
 - > Heptad.Dick.WinSystem.KeyboardMouse

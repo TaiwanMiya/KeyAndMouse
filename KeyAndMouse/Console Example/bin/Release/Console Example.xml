@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Console Example</name>
+    </assembly>
+    <members>
+        <member name="M:Console_Example.Program.Exit(System.Action)">
+            <summary>
+            	Program exit.
+            </summary>
+            <param name="quit"></param>
+        </member>
+    </members>
+</doc>

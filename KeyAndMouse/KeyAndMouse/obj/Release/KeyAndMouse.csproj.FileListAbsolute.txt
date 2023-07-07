@@ -1,0 +1,7 @@
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse\bin\Release\Heptad.Dick.WinSystem.KeyboardMouse.xml
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse\bin\Release\Heptad.Dick.WinSystem.KeyboardMouse.dll
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse\bin\Release\Heptad.Dick.WinSystem.KeyboardMouse.pdb
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse\obj\Release\KeyAndMouse.csproj.AssemblyReference.cache
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse\obj\Release\KeyAndMouse.csproj.CoreCompileInputs.cache
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse\obj\Release\Heptad.Dick.WinSystem.KeyboardMouse.dll
+C:\Users\CW_4RV2\Documents\KeyAndMouse\KeyAndMouse\KeyAndMouse\obj\Release\Heptad.Dick.WinSystem.KeyboardMouse.pdb
