@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Win32Api\ExtraKeyInfo.cs" />
     <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Code\KeyboardCode.cs" />
     <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\Code\MouseCode.cs" />
     <Compile Include="Heptad.Dick.WinSystem.KeyboardMouse\HotKeys\HotKeyArgs.cs" />

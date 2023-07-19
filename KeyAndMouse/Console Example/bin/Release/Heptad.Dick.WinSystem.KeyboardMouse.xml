@@ -4,6 +4,1809 @@
         <name>Heptad.Dick.WinSystem.KeyboardMouse</name>
     </assembly>
     <members>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.ExtraKeyInfo">
+            <summary>
+            	此類別可放入鍵盤的掃描碼作為轉換
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.ExtraKeyInfo.RepeatCount">
+            <summary>
+            	重複次數
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.ExtraKeyInfo.ScanCode">
+            <summary>
+            	鍵盤掃描碼
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.ExtraKeyInfo.ScanCode_Second">
+            <summary>
+            	鍵盤掃描修飾符
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.ExtraKeyInfo.ContextCode">
+            <summary>
+            	上下文代碼
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.ExtraKeyInfo.PreviousKeyState">
+            <summary>
+            	上一個關鍵狀態
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.ExtraKeyInfo.TransitionState">
+            <summary>
+            	過渡狀態
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.ExtraKeyInfo.LParam">
+            <summary>
+            	傳回
+            	<see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.SendMessage(System.IntPtr,System.UInt32,System.UInt32,System.UInt32)"/> 或者
+            	<see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.PostMessage(System.IntPtr,System.UInt32,System.UInt32,System.UInt32)"/>
+            	的 LParam 參數
+            </summary>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.FindWindow(System.String,System.String)">
+            <summary>
+                檢查窗口 (給其中一個參數即可, 另一個可為null)
+            </summary>
+            
+            <param name="lpClassName">
+                程序的名稱
+            </param>
+            
+            <param name="lpWindowName">
+                程序的視窗名稱
+            </param>
+            
+            <returns>
+                應用程式的句柄
+            </returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.FindWindowEx(System.IntPtr,System.IntPtr,System.String,System.String)">
+            <summary>
+                檢索類名和窗口名與指定字符串匹配的窗口的句柄
+                <para>
+                    該函數搜索子窗口, 從指定子窗口後面的窗口開始, 此函數不執行區分大小寫的搜索
+                </para>
+            </summary>
+            
+            <param name="hwndParent">
+                要搜索其子窗口的父窗口的句柄
+                <para>
+                    如果 <see href="hwndParent"/> 為NULL, 則該函數使用桌面窗口作為父窗口
+                </para>
+                <para>
+                    該函數在作為桌面子窗口的窗口中搜索
+                </para>
+                <para>
+                    如果 <see href="hwndParent"/> 是HWND_MESSAGE, 該函數搜索所有僅消息窗口
+                </para>
+            </param>
+            
+            <param name="hwndChildAfter">
+                子窗口的句柄
+                <para>
+                    搜索從 Z 順序中的下一個子窗口開始, 子窗口必須是 <see href="hwndParent"/> 的直接子窗口, 而不僅僅是後代窗口
+                </para>
+                <para>
+                    如果 <see href="hwndChildAfter"/> 為NULL, 則搜索從hwndParent的第一個子窗口開始
+                </para>
+                <para>
+                    如果 <see href="hwndChildAfter"/> 和 <see href="hwndChildAfter"/> 均為NULL, 則該函數將搜索所有頂級窗口和僅消息窗口
+                </para>
+            </param>
+            
+            <param name="lpszClass">
+                通過先前調用 RegisterClass 或 RegisterClassEx 函數創建的類名或類原子
+                <para>
+                    原子必須放在lpszClass的低位詞中, 高位字必須為零
+                </para>
+                <para>
+                    如果lpszClass是一個字符串, 它指定窗口類名
+                </para>
+                <para>
+                    類名可以是使用 RegisterClass 或 RegisterClassEx 註冊的任何名稱, 或任何預定義的控件類名稱, 也可以是MAKEINTATOM(0x8000)
+                </para>
+                <para>
+                    在後一種情況下, 0x8000 是菜單類的原子
+                </para>
+                <para>
+                    有關詳細信息, 請參閱本主題的備註部分
+                </para>
+            </param>
+            
+            <param name="lpszWindow">
+                窗口名稱 (窗口的標題), 如果此參數為NULL, 則所有窗口名稱都匹配
+            </param>
+            
+            <returns></returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.ShowWindow(System.IntPtr,System.Int32)">
+            <summary>
+                顯示窗口
+            </summary>
+            
+            <param name="hWnd">
+                窗口句柄
+            </param>
+            
+            <param name="nCmdShow">
+                ShowWindowCommands 方法 (用作不同呈現方式)
+            </param>
+            
+            <returns>
+            
+            </returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.SetForegroundWindow(System.IntPtr)">
+            <summary>
+                將指定視窗的執行緒帶入前景並啟動視窗
+                <para>
+                    鍵盤輸入會導向至視窗, 而使用者會變更各種視覺提示, 系統會將稍微較高的優先順序指派給建立前景視窗的執行緒, 而不是其他執行緒
+                </para>
+            </summary>
+            <param name="hWnd">
+                窗口的句柄
+            </param>
+            
+            <returns>
+                如果視窗帶至前景, 則傳回值為非零
+                <para>
+                    如果視窗未帶入前景, 則傳回值為零
+                </para>
+            </returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.ShowWindowAsync(System.IntPtr,System.Int32)">
+            <summary>
+            非同步顯示窗口
+            </summary>
+            
+            <param name="hWnd">
+                窗口句柄
+            </param>
+            
+            <param name="nCmdShow">
+                ShowWindowCommands 方法 (用作不同呈現方式)
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.DestroyWindow(System.IntPtr)">
+            <summary>
+                銷毀窗口
+            </summary>
+            
+            <param name="hWnd">
+                窗口句柄
+            </param>
+            
+            <returns>
+            </returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.SetWindowPos(System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                設定窗口位置或置頂
+            </summary>
+            
+            <param name="hWnd">
+                窗口的句柄
+            </param>
+            
+            <param name="hWndInsertAfter">
+                在 Z 順序中位於定位窗口之前的窗口句柄 -1至頂
+            </param>
+            
+            <param name="x">
+                窗口的x座標
+            </param>
+            
+            <param name="y">
+                窗口的y座標
+            </param>
+            
+            <param name="Width">
+                窗口的寬度
+            </param>
+            
+            <param name="Height">
+                窗口的高度
+            </param>
+            
+            <param name="flags">
+                
+            </param>
+            
+            <returns>
+                
+            </returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.BringWindowToTop(System.IntPtr)">
+            <summary>
+                設定窗口至頂
+            </summary>
+            
+            <param name="hWnd">
+                窗口的句柄
+            </param>
+            
+            <returns></returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.GetWindowRect(System.IntPtr,Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.RECT@)">
+            <summary>
+                獲取視窗四個點位的座標
+                <para>
+                    傳出一個結構, 給<see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.RECT"/>
+                </para>
+            </summary>
+            
+            <param name="hWnd">
+                窗口句柄
+            </param>
+            
+            <param name="lpRect">
+                傳出一個結構, 給<see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.RECT"/>
+            </param>
+            
+            <returns></returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.SendMessage(System.IntPtr,System.UInt32,System.UInt32,System.UInt32)">
+             <summary>
+                 將指定的消息發送到一個或多個窗口
+                 <para>
+                     <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.SendMessage(System.IntPtr,System.UInt32,System.UInt32,System.UInt32)"/> 函數調用指定窗口的窗口過程
+                 </para>
+                 <para>
+                     直到窗口過程處理完消息才返回
+                 </para>
+             </summary>
+             
+             <param name="hWnd">
+                 窗口的句柄
+             </param>
+             
+             <param name="Msg">
+                 要發布的消息
+             </param>
+             
+             <param name="wParam">
+                 附加消息特定信息
+             </param>
+            
+             <param name="lParam">
+                 附加消息特定信息
+             </param>
+             
+             <returns></returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.SendMessage(System.IntPtr,System.UInt32,System.IntPtr,System.IntPtr)">
+             <summary>
+                 同 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.SendMessage(System.IntPtr,System.UInt32,System.UInt32,System.UInt32)"/>
+             </summary>
+             
+             <param name="hWnd">
+                 窗口的句柄
+             </param>
+             
+             <param name="Msg">
+                 要發布的消息
+             </param>
+             
+             <param name="wParam">
+                 附加消息特定信息
+             </param>
+            
+             <param name="lParam">
+                 附加消息特定信息
+             </param>
+             <returns></returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.SendMessage(System.IntPtr,System.UInt32,System.IntPtr,System.String)">
+            <summary>
+                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.WMcode.WM_SETTEXT"/> 專用
+                <para>
+                    IParam 寫入文字
+                </para>
+                <para>
+                    <example>
+                        <br>IntPtr hWnd = WinUserNativeMethods.FindWindow(null, "未命名 - 記事本");</br>
+                        <br>IntPtr htextbox = WinUserNativeMethods.FindWindowEx(hWnd, IntPtr.Zero, "EDIT", null);</br>
+                        <br>IntPtr htextbox2 = WinUserNativeMethods.FindWindowEx(hWnd, htextbox, "EDIT", null); // 依據上次獲得的句柄, 可以得到下一個的句柄</br>
+                        <br>WinUserNativeMethods.SetForegroundWindow(hWnd);</br>
+                        <br>WinUserNativeMethods.SendMessage(htextbox, WMcode.WM_SETTEXT, IntPtr.Zero, txtNotepadText.Text);</br>
+                    </example>
+                </para>
+            
+            </summary>
+            <param name="hWnd"></param>
+            <param name="Msg"></param>
+            <param name="wParam"></param>
+            <param name="lParam">寫入的文字內容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.PostMessage(System.IntPtr,System.UInt32,System.UInt32,System.UInt32)">
+             <summary>
+                 在與創建指定窗口的線程關聯的消息隊列中放置（發布）一條消息,
+                 <para>
+                     並在不等待線程處理該消息的情況下返回
+                 </para>
+             </summary>
+             
+             <param name="hWnd">
+                 窗口的句柄
+             </param>
+             
+             <param name="Msg">
+                 要發布的消息
+             </param>
+             
+             <param name="wParam">
+                 附加消息特定信息
+             </param>
+            
+             <param name="lParam">
+                 附加消息特定信息
+             </param>
+             
+             <returns></returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.PostMessage(System.IntPtr,System.UInt32,System.IntPtr,System.IntPtr)">
+             <summary>
+                 同 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.PostMessage(System.IntPtr,System.UInt32,System.UInt32,System.UInt32)"/>
+             </summary>
+             
+             <param name="hWnd">
+                 窗口的句柄
+             </param>
+             
+             <param name="Msg">
+                 要發布的消息
+             </param>
+             
+             <param name="wParam">
+                 附加消息特定信息
+             </param>
+            
+             <param name="lParam">
+                 附加消息特定信息
+             </param>
+             
+             <returns></returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.GetForegroundWindow">
+            <summary>
+                獲取前景窗口 (最上層窗口)
+            </summary>
+            
+            <returns>
+                窗口的句柄
+            </returns>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.RECT">
+            <summary>
+            應用程序的 最左, 最上, 最右, 最下的座標結構
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.RECT.Left">
+            <summary>
+            最左座標
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.RECT.Top">
+            <summary>
+            最上座標
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.RECT.Right">
+            <summary>
+            最右座標
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.RECT.Bottom">
+            <summary>
+            最下座標
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.IParamm.repeatCount">
+            <summary>
+                重複次數
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.IParamm.scanCode">
+            <summary>
+                鍵盤掃描碼
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.IParamm.extendedKey">
+            <summary>
+                擴展鍵
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.IParamm.prevKeyState">
+            <summary>
+                功能鍵狀態
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.IParamm.transitionState">
+            <summary>
+                過渡狀態
+            </summary>
+        </member>
+        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.IParamm.lParam">
+            <summary>
+                <para>
+                    <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.SendMessage(System.IntPtr,System.UInt32,System.UInt32,System.UInt32)"/>
+                </para>
+                <para>
+                    <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.PostMessage(System.IntPtr,System.UInt32,System.UInt32,System.UInt32)"/>
+                </para>
+                的 IParam 參數 (第4個參數)
+            </summary>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardScript">
+            <summary>
+                底層鍵盤驅動事件
+            </summary>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardScript.GetBreakCode(Heptad.Dick.WinSystem.KeyboardMouse.Code.ScanCode)">
+            <summary>
+                斷開鍵盤掃描碼
+                <para>
+                    鍵盤掃描碼 + 0x80
+                </para>
+                <para>
+                    也稱為 BreakCode
+                </para>
+                <para>
+                    是對該鍵碼解除硬體設備的控制, 傳送後該鍵的功能將失效直到再次啟用
+                </para>
+            </summary>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardScript.keybd_event(System.Byte,System.Byte,System.Int32,System.Int32)">
+            <summary>
+                發送鍵盤事件
+            </summary>
+            
+            <param name="bVk" >
+                虛擬鍵碼
+            </param>
+            
+            <param name= "bScan" >
+                鍵盤掃描碼
+            </param>
+            
+            <param name= "dwFlags" >
+                請參照 <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Code.keyFlags"/>
+            </param>
+            
+            <param name= "dwExtraInfo">
+                與鍵盤相關的附加數據 (建議設置0)
+            </param>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardScript.VkKeyScan(System.Char)">
+            <summary>
+                將字符轉換為當前鍵盤對應的虛擬鍵代碼和 shift 狀態
+            </summary>
+            
+            <param name="ch">
+                要轉換為虛擬鍵代碼的字符
+            </param>
+            
+            <returns>
+                如果函數成功, 返回值的低位字節包含虛擬鍵碼, 高位字節包含移位狀態, 可以是以下標誌位的組合
+                <para>
+                    1 = 	按下任一 SHIFT 鍵
+                </para>
+                <para>
+                    2 =     按下任一 CTRL 鍵
+                </para>
+                <para>
+                    4 =     按下任一 ALT 鍵
+                </para>
+                <para>
+                    8 = 	半格鍵被按下
+                </para>
+                <para>
+                    16 =    保留（由鍵盤佈局驅動程序定義）
+                </para>
+                <para>
+                    32 =    保留（由鍵盤佈局驅動程序定義）
+                </para>
+            </returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardScript.keyInput(System.Byte,System.Byte,System.Int32)">
+            <summary>
+                按下或鬆開按鍵
+            </summary>
+            
+            <param name="keyName">
+                虛擬鍵碼
+            </param>
+            
+            <param name="ScanCode">
+                鍵盤掃描碼
+            </param>
+            
+            <param name="IsDown">
+                <list type="bullet">
+                    <item>
+                        <description>0 - 按下</description>
+                    </item>
+                    <item>
+                        <description>2 - 鬆開</description>
+                    </item>
+                </list>
+            </param>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardScript.keyPress(System.Byte[],System.Byte[])">
+            <summary>
+                按下多個按鍵並鬆開
+            </summary>
+            
+            <param name="keyNames">
+                虛擬鍵碼
+            </param>
+            
+            <param name="ScanCodes">
+                鍵盤掃描碼
+            </param>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardScript.keyStringInput(System.String)">
+            <summary>
+                字符串執行鍵盤操作
+            </summary>
+            
+            <param name="str">
+                字符串
+            </param>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseScript">
+            <summary>
+                底層滑鼠驅動事件
+            </summary>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseScript.mouse_event(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                鼠標操作
+            </summary>
+            
+            <param name="dwFlags">
+                動作和點擊選項
+            </param>
+            
+            <param name="dx">
+                X 座標位置或變化
+            </param>
+            
+            <param name="dy">
+                Y座標位置或變化
+            </param>
+            
+            <param name="dwData">
+                滾輪移動
+                <list type="bullet">
+                    <item>
+                        <description>正值向前</description>
+                    </item>
+                    <item>
+                        <description>負值向後</description>
+                    </item>
+                </list>
+            </param>
+            
+            <param name="dwExtraInfo">
+                與鼠標相關的附加數據 (建議設置0
+            </param>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseScript.SetCursorPos(System.Int32,System.Int32)">
+            <summary>
+            鼠標移動
+            </summary>
+            
+            <param name="x">
+                移動到位的 X 座標
+            </param>
+            <param name="y">
+                移動到位的 Y 座標
+            </param>
+            
+            <returns>
+                本次執行的進程識別碼
+            </returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseScript.MouseClick(System.Int32,System.Int32,Heptad.Dick.WinSystem.KeyboardMouse.Code.MouseKeys)">
+            <summary>
+            移動並點擊
+            </summary>
+            
+            <param name="X">
+                X 座標
+            </param>
+            
+            <param name="Y">
+                Y 座標
+            </param>
+            
+            <param name="btn">
+                滑鼠按鍵, 參照 <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Code.MouseKeys"/>
+            </param>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseScript.Click(Heptad.Dick.WinSystem.KeyboardMouse.Code.MouseKeys)">
+            <summary>
+            不移動只點擊
+            </summary>
+            
+            <param name="btn">
+                滑鼠按鍵, 參照 <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Code.MouseKeys"/>
+            </param>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseScript.Scroll(System.Int32)">
+            <summary>
+            滑鼠滾動
+            </summary>
+            
+            <param name="values">
+                滾輪移動
+                <list type="bullet">
+                    <item>
+                        <description>正值向前</description>
+                    </item>
+                    <item>
+                        <description>負值向後</description>
+                    </item>
+                </list>
+            </param>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.AppMouseStruct">
+            <summary>
+                <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.AppMouseStruct" /> 的結構包含有關應用程序及鼠標輸入事件的信息
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.AppMouseStruct.Point">
+            <summary>
+                <para>
+                    指定一個 <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Point" /> 結構
+                </para>
+                <para>
+                    該結構包含光標的 X 和 Y 坐標, 以屏幕坐標表示
+                </para>
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.AppMouseStruct.MouseData_x86">
+            <summary>
+                指定與鼠標消息關聯的信息
+            </summary>
+            <remarks>
+                可能的值是:
+                <list type="bullet">
+                    <item>
+                        <description>0 - 無信息</description>
+                    </item>
+                    <item>
+                        <description> 1   - X-Button1 點擊</description>
+                    </item>
+                    <item>
+                        <description> 2   - X-Button2 點擊</description>
+                    </item>
+                    <item>
+                        <description> 120 - 鼠標向前</description>
+                    </item>
+                    <item>
+                        <description>-120 - 鼠標向後</description>
+                    </item>
+                </list>
+            </remarks>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.AppMouseStruct.ToMouseStruct">
+            <summary>
+                轉換當前 <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.AppMouseStruct" /> 變成一個 <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseStruct" />.
+            </summary>
+            <returns></returns>
+            <remarks>
+                <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.AppMouseStruct" /> 沒有時間戳, 因此在調用時會生成一個
+            </remarks>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.CallbackData">
+            <summary>
+                回調數據
+            </summary>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookIds">
+            <summary>
+                底層掛鉤碼
+                <para>
+                    winuser.h 掛鉤程序ID
+                </para>
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookIds.WH_MOUSE">
+            <summary>
+                安裝一個監視鼠標消息的程序, 詳情請看 user32 MouseProc
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookIds.WH_KEYBOARD">
+            <summary>
+                安裝一個監視鍵盤消息的程序, 詳情請看 user32 KeyboardProc
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookIds.WH_MOUSE_LL">
+            <summary>
+                <para>
+                    <b>Windows NT/2000/XP/Vista/7</b>
+                </para>
+                <para>
+                    安裝一個監控低級鼠標輸入事件的掛鉤程序
+                </para>
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookIds.WH_KEYBOARD_LL">
+            <summary>
+                <para>
+                    <b>Windows NT/2000/XP/Vista/7</b>
+                </para>
+                <para>
+                    安裝一個監視低級鍵盤輸入事件的掛鉤程序
+                </para>
+            </summary>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookNativeMethods">
+            <summary>
+                底層掛鉤方法
+            </summary>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookNativeMethods.CallNextHookEx(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+                <para>
+                    函數 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookNativeMethods.CallNextHookEx(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)"/> 是將掛鉤信息傳遞給當前掛鉤鏈中的下一個掛鉤過程
+                </para>
+                <para>
+                    鉤子過程可以在處理鉤子信息之前或之後調用此函數
+                </para>
+            </summary>
+            
+            <param name="idHook">
+                該參數被忽略
+            </param>
+            
+            <param name="nCode">
+                [in] 指定傳遞給當前鉤子過程的鉤子代碼
+            </param>
+            
+            <param name="wParam">
+                [in] 指定傳遞給當前掛鉤過程的 wParam 值
+            </param>
+            
+            <param name="lParam">
+                [in] 指定傳遞給當前掛鉤過程的 lParam 值
+            </param>
+            
+            <returns>該值由鏈中的下一個鉤子過程返回</returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookNativeMethods.SetWindowsHookEx(System.Int32,Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookProcedure,System.IntPtr,System.Int32)">
+            <summary>
+                <para>
+                    函數 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookNativeMethods.SetWindowsHookEx(System.Int32,Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookProcedure,System.IntPtr,System.Int32)"/> 是將應用程序定義的掛鉤過程安裝到掛鉤鏈中
+                </para>
+                <para>
+                    安裝一個掛鉤程序來監視系統中某些類型的事件
+                </para>
+                <para>
+                    這些事件與特定線程或與調用線程相同的桌面中的所有線程關聯
+                </para>
+            </summary>
+            
+            <param name="idHook">
+                <para>
+                    [in] 指定要安裝的掛鉤過程的類型, 此參數可以是以下值之一
+                </para>
+            </param>
+            
+            <param name="lpfn">
+                <para>
+                    [in] 指向鉤子過程的指針
+                </para>
+                <para>
+                    如果 dwThreadId 參數為零或指定由不同進程創建的線程的識別碼
+                </para>
+                <para>
+                    lpfn 參數必須指向動態鏈接庫 (DLL) 中的掛鉤過程
+                </para>
+                <para>
+                    否則, lpfn 可以指向與當前進程關聯的代碼中的掛鉤過程
+                </para>
+            </param>
+            
+            <param name="hMod">
+                <para>
+                    [in] 包含 lpfn 參數指向的鉤子過程的 DLL 句柄
+                </para>
+                 <para>
+                    如果 dwThreadId 參數指定由當前進程創建的線程並且掛鉤過程在與當前進程關聯的代碼內
+                </para>
+                 <para>
+                    則 hMod 參數必須設置為 NULL
+                </para>
+            </param>
+            
+            <param name="dwThreadId">
+                <para>
+                    [in] 指定要與掛鉤過程關聯的線程的識別碼
+                </para>
+                <para>
+                    如果此參數為零
+                </para>
+                <para>
+                    則掛鉤過程與在與調用線程相同的桌面上運行的所有現有線程相關聯
+                </para>
+            </param>
+            
+            <returns>
+                <para>
+                    如果函數成功, 返回值是鉤子過程的句柄
+                </para>
+                <para>
+                    如果函數失敗, 返回值為 NULL
+                </para>
+                <para>
+                    要獲取擴展錯誤信息, 請調用 GetLastError
+                </para>
+            </returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookNativeMethods.UnhookWindowsHookEx(System.IntPtr)">
+            <summary>
+                <para>
+                    函數 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookNativeMethods.UnhookWindowsHookEx(System.IntPtr)"/> 是刪除由 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookNativeMethods.SetWindowsHookEx(System.Int32,Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookProcedure,System.IntPtr,System.Int32)"/> 函數安裝在鉤子鏈中的鉤子過程
+                </para>
+            </summary>
+            
+            <param name="idHook">
+                <para>
+                    [in] 要卸下的掛鉤句柄, 該參數是之前調用 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookNativeMethods.SetWindowsHookEx(System.Int32,Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookProcedure,System.IntPtr,System.Int32)"/> 獲得的鉤子句柄
+                </para>
+            </param>
+            
+            <returns>
+                <para>
+                    如果函數成功, 則返回值非零
+                </para>
+                <para>
+                    如果函數失敗, 則返回值為零
+                </para>
+                <para>
+                    要獲取擴展錯誤信息, 請調用 GetLastError
+                </para>
+            </returns>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookProcedure">
+            <summary>
+                <para>
+                    CallWndProc 掛鉤過程是與 SetWindowsHookEx 函數一起使用的應用程序定義或庫定義的回調函數
+                </para>
+                <para>
+                    HOOKPROC 類型定義了一個指向這個回調函數的指針
+                </para>
+                <para>
+                    CallWndProc 是應用程序定義或庫定義的函數名稱的佔位符
+                </para>
+            </summary>
+            
+            <param name="nCode">
+                <para>
+                    [in] 指定掛鉤過程是否必須處理消息
+                </para>
+                <para>
+                    如果 nCode 是 HC_ACTION, 則掛鉤過程必須處理該消息
+                </para>
+                <para>
+                    如果 nCode 小於零, 則掛鉤過程必須將消息傳遞給 CallNextHookEx 函數而不進行進一步處理
+                </para>
+                <para>
+                    而且必須返回 CallNextHookEx 返回的值
+                </para>
+            </param>
+            
+            <param name="wParam">
+                <para>
+                    [in] 指定消息是否由當前線程發送
+                </para>
+                <para>
+                    如果消息是由當前線程發送的, 則為非零; 否則為零
+                </para>
+            </param>
+            
+            <param name="lParam">
+                <para>
+                    [in] 指向包含有關消息的詳細信息的 CWPSTRUCT 結構的指針
+                </para>
+            </param>
+            
+            <returns>
+                <para>
+                    如果 nCode 小於零, 則掛鉤過程必須返回 CallNextHookEx 返回的值
+                </para>
+                <para>
+                    如果 nCode 大於等於 0, 強烈建議調用 CallNextHookEx 並返回它返回的值;
+                </para>
+                <para>
+                    否則, 其他安裝了 WH_CALLWNDPROC 鉤子的應用程序將不會收到鉤子通知, 因此可能會出現錯誤的行為
+                </para>
+                <para>
+                    如果掛鉤過程不調用 CallNextHookEx, 則返回值為零
+                </para>
+            </returns>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HotkeysNativeMethods">
+            <summary>
+                底層熱鍵方法
+            </summary>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HotkeysNativeMethods.RegisterHotKey(System.IntPtr,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                定義系統範圍的熱鍵
+            </summary>
+            
+            <param name="hwnd">
+                <para>
+                    將接收由熱鍵生成的 WM_HOTKEY 消息的窗口句柄
+                </para>
+                <para>
+                    如果此參數為 <b>NULL</b>
+                </para>
+                <para>
+                    WM_HOTKEY 消息被發佈到調用線程的消息隊列中
+                </para>
+                <para>
+                    並且必須在消息循環中進行處理
+                </para>
+            </param>
+            
+            <param name="id">
+                <para>
+                    此為熱鍵的識別碼
+                </para>
+                <para>
+                    如果 hWnd 參數為 NULL
+                </para>
+                <para>
+                    則熱鍵與當前線程相關聯
+                </para>
+                <para>
+                    而不是與特定窗口相關聯
+                </para>
+                <para>
+                    如果已存在具有相同 hWnd 和 id 參數的熱鍵
+                </para>
+                <para>
+                    請參閱備註了解所採取的操作
+                </para>
+            </param>
+            
+            <param name="fsModifiers">
+                <para>
+                    為了生成 WM_HOTKEY 消息
+                </para>
+                <para>
+                    必須與 uVirtKey 參數指定的鍵組合按下的鍵
+                </para>
+                <para>
+                    fsModifiers 參數可以是以下值的組合
+                </para>
+            </param>
+            
+            <param name="vk">
+                <para>
+                    熱鍵的虛擬鍵代碼
+                </para>
+            </param>
+            
+            <returns>
+                <para>
+                    如果函數成功, 則返回值非零
+                </para>
+                <para>
+                    如果函數失敗, 則返回值為零
+                </para>
+                <para>
+                    要獲取擴展錯誤信息, 請調用 GetLastError
+                </para>
+            </returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HotkeysNativeMethods.UnregisterHotKey(System.IntPtr,System.Int32)">
+             <summary>
+                 釋放調用線程先前註冊的熱鍵
+             </summary>
+             
+             <param name="hwnd">
+                 <para>
+                     與要釋放的熱鍵關聯的窗口句柄
+                 </para>
+                 <para>
+                     如果熱鍵與窗口無關, 則此參數應為 NULL
+                 </para>
+             </param>
+             
+             <param name="id">
+                 <para>
+                     要釋放的熱鍵的識別碼
+                 </para>
+             </param>
+            
+             <returns>
+                 <para>
+                     如果函數成功, 則返回值非零
+                 </para>
+                 <para>
+                     如果函數失敗, 則返回值為零
+                 </para>
+                 <para>
+                     要獲取擴展錯誤信息, 請調用 GetLastError
+                 </para>
+             </returns>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardHookStruct">
+            <summary>
+                <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardHookStruct"/> 結構包含有關低級鍵盤輸入事件的信息
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardHookStruct.VirtualKeyCode">
+            <summary>
+                指定一個虛擬鍵碼, 代碼必須是 1 到 254 範圍內的值
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardHookStruct.ScanCode">
+            <summary>
+                指定鍵盤的硬件掃描代碼
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardHookStruct.Flags">
+            <summary>
+                指定擴展鍵標誌、事件注入標誌、上下文代碼和轉換狀態標誌
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardHookStruct.Time">
+            <summary>
+                指定此消息的時間戳
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardHookStruct.ExtraInfo">
+            <summary>
+                指定與消息關聯的額外信息
+            </summary>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MapType">
+            <summary>
+                映射虛擬鍵 的 <see href="uCode"/> 類型
+                <para>給 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.MapVirtualKeyEx(System.Int32,System.Int32,System.IntPtr)"/>, <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.MapVirtualKey(System.Int32,System.Int32)"/> 使用</para>
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MapType.MAPVK_VK_TO_VSC">
+            <summary>
+                <para>
+                    uCode參數是一個虛擬鍵碼, 被轉換成掃描碼
+                </para>
+                <para>
+                    如果是不區分左右鍵的虛擬鍵碼, 則返回左邊的掃描碼
+                </para>
+                <para>
+                    如果轉換失敗, 該函數返回 0
+                </para>
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MapType.MAPVK_VSC_TO_VK">
+            <summary>
+                <para>
+                    uCode參數是一個掃描碼, 被翻譯成一個不區分左右鍵的虛擬鍵碼
+                </para>
+                <para>
+                    如果轉換失敗, 該函數返回 0
+                </para>
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MapType.MAPVK_VK_TO_CHAR">
+            <summary>
+                <para>
+                    uCode參數是一個虛擬鍵碼, 在返回值的低位字中被轉換成一個未移位的字符值
+                </para>
+                <para>
+                    通過設置返回值的最高位來指示死鍵(變音符號)
+                </para>
+                <para>
+                    如果轉換失敗, 該函數返回 0
+                </para>
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MapType.MAPVK_VSC_TO_VK_EX">
+            <summary>
+                <para>
+                    uCode參數是一個掃描碼, 被轉換成一個虛擬鍵碼, 用於區分左手鍵和右手鍵
+                </para>
+                <para>
+                    如果沒有轉換, 該函數返回 0
+                </para>
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MapType.MAPVK_VK_TO_VSC_EX">
+            <summary>
+                <para>
+                    uCode參數是一個虛擬鍵碼，並被轉換為掃描碼
+                </para>
+                <para>
+                    如果是不區分左右鍵的虛擬鍵碼, 則返回左手掃碼
+                </para>
+                <para>
+                    如果掃描碼是擴展掃描碼, 則uCode值的高字節可以包含0xe0或0xe1來指定擴展掃描碼
+                </para>
+                <para>
+                    如果沒有轉換, 該函數返回 0
+                </para>
+            </summary>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods">
+            <summary>
+                底層鍵盤方法
+            </summary>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.TryGetCharFromKeyboardState(System.Int32,System.Int32,System.Char[]@)">
+            <summary>
+                <para>
+                    在事先不知道掃描碼的情況下, 使用當前鍵盤佈局將虛擬鍵轉換為其等效字符
+                </para>
+            </summary>
+            
+            <param name="virtualKeyCode">
+                虛擬鍵碼
+            </param>
+            
+            <param name="fuState">
+                副狀態
+            </param>
+            
+            <param name="chars">
+                字節陣列
+            </param>
+            
+            <returns></returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.TryGetCharFromKeyboardState(System.Int32,System.Int32,System.Int32,System.Char[]@)">
+            <summary>
+                使用當前鍵盤佈局將虛擬鍵轉換為其等效字符
+            </summary>
+            
+            <param name="virtualKeyCode">
+                虛擬鍵碼
+            </param>
+            
+            <param name="scanCode">
+                鍵盤掃描碼
+            </param>
+            
+            <param name="fuState">
+                副狀態
+            </param>
+            
+            <param name="chars">
+                字節陣列
+            </param>
+            
+            <returns></returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.TryGetCharFromKeyboardState(System.Int32,System.Int32,System.Int32,System.IntPtr,System.Char[]@)">
+            <summary>
+                使用指定的鍵盤佈局將虛擬鍵轉換為其等效字符
+            </summary>
+            
+            <param name="virtualKeyCode">
+                虛擬鍵碼
+            </param>
+            
+            <param name="scanCode">
+                鍵盤掃描碼
+            </param>
+            
+            <param name="fuState">
+                副狀態
+            </param>
+            
+            <param name="dwhkl">
+                HKL
+            </param>
+            
+            <param name="chars">
+                字節陣列
+            </param>
+            
+            <returns></returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.GetActiveKeyboard">
+            <summary>
+                <para>
+                    獲取活動應用程序線程的輸入語言環境識別碼
+                </para>
+                <para>
+                    將此與 ToUnicodeEx 和 MapVirtualKeyEx 結合使用使 Windows 能夠根據為應用程序指定的鍵盤佈局正確轉換鍵
+                </para>
+            </summary>
+            
+            <returns>HKL</returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.ToAscii(System.Int32,System.Int32,System.Byte[],System.Byte[],System.Int32)">
+            <summary>
+                <para>
+                    <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.ToAscii(System.Int32,System.Int32,System.Byte[],System.Byte[],System.Int32)"/> 函數將指定的虛擬鍵代碼和鍵盤狀態轉換為相應的一個或多個字符
+                </para>
+                <para>
+                    該函數使用鍵盤佈局句柄標識的輸入語言和物理鍵盤佈局來轉換代碼
+                </para>
+            </summary>
+            
+            <param name="uVirtKey">
+                <para>
+                    [in] 指定要轉換的虛擬鍵碼
+                </para>
+            </param>
+            
+            <param name="uScanCode">
+                <para>
+                    [in] 指定要轉換的鍵盤掃描碼 
+                </para>
+                <para>
+                    如果鍵向上(未按下), 則設置此值的高位
+                </para>
+            </param>
+            
+            <param name="lpbKeyState">
+                <para>
+                    [in] 指向包含當前鍵盤狀態的 256 字節數組的指針
+                </para>
+                <para>
+                    數組中的每個元素(字節)都包含一個鍵的狀態
+                </para>
+                <para>
+                    如果設置了一個字節的高位, 則按鍵按下
+                </para>
+                <para>
+                    如果設置了低位, 則表示該鍵已打開, 在這個函數中
+                </para>
+                <para>
+                    只有 CAPS LOCK 鍵的切換位是相關的
+                </para>
+                <para>
+                    NUM LOCK 和 SCROLL LOCK 鍵將被忽略
+                </para>
+            </param>
+            
+            <param name="lpwTransKey">
+                <para>
+                    [out] 指向接收已轉換字符的緩衝區的指針
+                </para>
+            </param>
+            
+            <param name="fuState">
+                <para>
+                    [in] 指定菜單是否處於活動狀態, 如果菜單處於活動狀態, 此參數必須為 1; 否則為 0
+                </para>
+            </param>
+            
+            <returns>
+                <para>
+                    如果指定的鍵是死鍵, 則返回值為負, 否則它是以下值之一
+                </para>
+                <list type="number">
+                    <item>
+                        0 指定的虛擬鍵對鍵盤的當前狀態沒有轉換
+                    </item>
+                    <item>
+                        1 一個字符被複製到緩衝區
+                    </item>
+                    <item>
+                        <para>
+                            2 兩個字符被複製到緩衝區, 當存儲在鍵盤佈局中的死鍵字符
+                        </para>
+                        <para>
+                            (重音或變音符號), 無法與指定的虛擬鍵組合以形成單個字符時, 通常會發生這種情況
+                        </para>
+                    </item>
+                </list>
+            </returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.ToUnicodeEx(System.Int32,System.Int32,System.Byte[],System.Text.StringBuilder,System.Int32,System.Int32,System.IntPtr)">
+            <summary>
+                將指定的虛擬鍵代碼和鍵盤狀態轉換為相應的 Unicode 字符
+            </summary>
+            
+            <param name="wVirtKey">
+                <para>
+                    [in] 要轉換的虛擬鍵碼
+                </para>
+            </param>
+            
+            <param name="wScanCode">
+                <para>
+                    [in] 要轉換的鍵盤掃描碼, 如果鍵向上, 則設置此值的高位
+                </para>
+            </param>
+            
+            <param name="lpKeyState">
+                <para>
+                    [in, optional] 指向包含當前鍵盤狀態的 256 字節數組的指針
+                </para>
+                <para>
+                    數組中的每個元素(字節)都包含一個鍵的狀態
+                </para>
+                <para>
+                    如果設置了一個字節的高位, 則key為down
+                </para>
+            </param>
+            
+            <param name="pwszBuff">
+                <para>
+                    [out] 接收已轉換的 Unicode 字符或字符的緩衝區
+                </para>
+                <para>
+                    但即使變量名稱表明它是空的或終止的, 也可能會返回此緩衝區而不以空終止
+                </para>
+            </param>
+            
+            <param name="cchBuff">
+                <para>
+                    [in] <seealso href="pwszBuff"/> 參數指向的緩衝區的大小(以字符為單位)
+                </para>
+            </param>
+            
+            <param name="wFlags">
+                <para>
+                    [in] 函數的行為, 如果設置了 0, 則菜單處於活動狀態, 1 到 31 保留
+                </para>
+            </param>
+                
+            <param name="dwhkl">
+                <para>
+                    用於轉換指定代碼的輸入語言環境識別碼
+                </para>
+            </param>
+            
+            <returns>
+                -1 &lt;= return &lt;= n
+                <list type="bullet">
+                    <item>
+                        <para>
+                            -1    = 指定的虛擬鍵是死鍵字符(重音或變音符號)
+                        </para>
+                        <para>
+                            無論鍵盤佈局如何, 都會返回此值, 即使已鍵入多個字符並存儲在鍵盤狀態中也是如此
+                        </para>
+                        <para>
+                            即使使用 Unicode 鍵盤佈局, 該函數也會將死鍵字符的間距版本寫入 <see href="pwszBuff"/> 指定的緩衝區
+                        </para>
+                        <para>
+                            舉例, 函數寫入字符 SPACING ACUTE (0x00B4), 而不是字符 NON_SPACING ACUTE (0x0301)
+                        </para>
+                    </item>
+                    <item>
+                        <para>
+                            0    = 指定的虛擬鍵對鍵盤的當前狀態沒有轉換
+                        </para>
+                        <para>
+                            沒有任何內容寫入 <see href="pwszBuff"/> 指定的緩衝區
+                        </para>
+                    </item>
+                    <item>
+                        <para>
+                            1    = 一個字符被寫入 <see href="pwszBuff"/> 指定的緩衝區
+                        </para>
+                    </item>
+                    <item>
+                        <para>
+                            n    = 兩個或多個字符被寫入 <see href="pwszBuff"/> 指定的緩衝區
+                        </para>
+                        <para>
+                            最常見的原因是存儲在鍵盤佈局中的死鍵字符(重音或變音符號) 無法與指定的虛擬鍵組合形成單個字符
+                        </para>
+                        <para>
+                            但緩衝區可能包含比返回值指定的更多的字符
+                        </para>
+                        <para>
+                            發生這種情況時, 任何多餘的字符都是無效的, 請直接忽略
+                        </para>
+                        <para>
+                            
+                        </para>
+                    </item>
+                </list>
+            </returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.GetKeyboardState(System.Byte[])">
+            <summary>
+                <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.GetKeyboardState(System.Byte[])"/> 函數將 256 個虛擬鍵的狀態復製到指定緩衝區
+            </summary>
+            
+            <param name="pbKeyState">
+                [in] 指向包含鍵盤按鍵狀態的 256 字節數組的指針
+            </param>
+            
+            <returns>
+                <para>
+                    如果函數成功, 則返回值非零
+                </para>
+                <para>
+                    如果函數失敗, 則返回值為零
+                </para>
+                <para>
+                    要獲取擴展錯誤信息, 請調用 GetLastError
+                </para>
+            </returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.GetKeyState(System.Int32)">
+            <summary>
+                <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.GetKeyState(System.Int32)"/> 函數檢索指定虛擬鍵的狀態。狀態指定鍵是向上、向下還是切換
+                (開、關——每次按鍵時交替)
+            </summary>
+            
+            <param name="vKey">
+                <para>
+                    [in] 指定一個虛擬鍵
+                </para>
+                <para>
+                    如果所需的虛擬鍵是字母或數字(A 到 Z、a 到 z 或 0 到 9)
+                </para>
+                <para>
+                    <see href="nVirtKey"/> 必須設置為該字符的 ASCII 值
+                </para>
+                <para>
+                    對於其他鍵, 它必須是虛擬鍵碼
+                </para>
+            </param>
+            
+            <returns>
+                <para>
+                    返回值指定指定虛擬鍵的狀態
+                </para>
+                <para>
+                    如果高位為1, 則key為down; 否則key為up
+                </para>
+                <para>
+                    如果低位為1, 則鍵做出切換一個鍵, 如 CAPS LOCK 鍵, 如果打開就會被切換
+                </para>
+                <para>
+                    如果低位為0, 則該鍵關閉且未切換, 切換鍵時鍵盤上的切換鍵指示燈(如果有) 將亮起, 當鍵未切換時熄滅
+                </para>
+            </returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.MapVirtualKeyEx(System.Int32,System.Int32,System.IntPtr)">
+            <summary>
+                將虛擬鍵碼轉換(映射) 為掃描碼或字符值, 或將掃描碼轉換為虛擬鍵碼
+            </summary>
+            
+            <param name="uCode">
+                [in] 鍵的虛擬鍵碼或掃描碼, 該值的解釋方式取決於 <see href="uMapType"/> 參數的值
+            </param>
+            
+            <param name="uMapType">
+                [in] 要執行的轉換, 這個參數的值取決於 <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MapType"/> 參數的值
+            </param>
+            
+            <param name="dwhkl">
+                [in] 用於轉換指定代碼的輸入語言環境識別碼
+            </param>
+            
+            <returns>
+                虛擬鍵碼或鍵盤掃描碼
+            </returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.MapVirtualKey(System.Int32,System.Int32)">
+            <summary>
+                將虛擬鍵碼轉換(映射) 為掃描碼或字符值, 或將掃描碼轉換為虛擬鍵碼
+            </summary>
+            
+            <param name="uCode">
+                [in] 鍵的虛擬鍵碼或掃描碼, 該值的解釋方式取決於 <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MapType"/> 參數的值
+            </param>
+            
+            <param name="uMapType">
+                [in] 要執行的轉換, 這個參數的值取決於 <see href="uCode"/> 參數的值
+            </param>
+            
+            <returns>
+                虛擬鍵碼或鍵盤掃描碼
+            </returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.GetKeyboardLayout(System.Int32)">
+            <summary>
+                檢索指定線程的活動輸入區域設置識別碼 (以前稱鍵盤佈局)
+                如果 <see href="idThread"/> 參數為零, 則返回活動線程的輸入區域設置識別碼
+            </summary>
+            
+            <param name="dwLayout">
+                [in] 要查詢的線程的識別碼, 或者目前線程為 0
+            </param>
+            
+            <returns>
+                <para>
+                    返回值是線程的輸入語言環境識別碼
+                </para>
+                <para>
+                    低位字包含輸入語言的語言識別碼
+                </para>
+                <para>
+                    高位字包含鍵盤物理佈局的設備句柄
+                </para>
+            </returns>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages">
+            <summary>
+                底層鍵盤鼠標參數
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MOUSEMOVE">
+            <summary>
+                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MOUSEMOVE"/>
+                在鼠標移動時發送到窗口
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_LBUTTONDOWN">
+            <summary>
+                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_LBUTTONDOWN"/>
+                在用戶按下鼠標左鍵時發送到窗口
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_RBUTTONDOWN">
+            <summary>
+                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_RBUTTONDOWN"/>
+                在用戶按下鼠標右鍵時發送到窗口
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MBUTTONDOWN">
+            <summary>
+                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MBUTTONDOWN"/>
+                在用戶按下鼠標中鍵時發送到窗口
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_LBUTTONUP">
+            <summary>
+                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_LBUTTONUP"/>
+                在用戶鬆開鼠標左鍵時發送到窗口
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_RBUTTONUP">
+            <summary>
+                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_RBUTTONUP"/>
+                在用戶鬆開鼠標右鍵時發送到窗口
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MBUTTONUP">
+            <summary>
+                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_RBUTTONUP"/>
+                在用戶鬆開鼠標中鍵時發送到窗口
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_LBUTTONDBLCLK">
+            <summary>
+                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_LBUTTONDBLCLK"/>
+                在用戶雙擊鼠標左鍵時發送到窗口
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_RBUTTONDBLCLK">
+            <summary>
+                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_RBUTTONDBLCLK"/>
+                在用戶雙擊鼠標右鍵時發送到窗口
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MBUTTONDBLCLK">
+            <summary>
+                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_RBUTTONDOWN"/>
+                在用戶按鼠標右鍵時發送到窗口
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MOUSEWHEEL">
+            <summary>
+                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MOUSEWHEEL"/>
+                在用戶按鼠標滾輪時發送到窗口
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_XBUTTONDOWN">
+            <summary>
+                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_XBUTTONDOWN"/>
+                在用戶按下第一個或第二個 X 鼠標按鈕時發送到窗口
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_XBUTTONUP">
+            <summary>
+                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_XBUTTONUP"/>
+                在用戶鬆開第一個或第二個 X 鼠標按鈕時發送到窗口
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_XBUTTONDBLCLK">
+            <summary>
+                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_XBUTTONDBLCLK"/>
+                在用戶雙擊第一個或第二個 X 鼠標按鈕時發送到窗口
+            </summary>
+            
+            <remarks>
+                只有具有 CS_DBLCLKS 樣式的窗口才能接收 <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_XBUTTONDBLCLK"/> 的消息
+            </remarks>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MOUSEHWHEEL">
+            <summary>
+                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MOUSEHWHEEL"/>
+                在用戶的鼠標水平滾輪傾斜或旋轉時發送到窗口
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_KEYDOWN">
+            <summary>
+                當按下非系統鍵時, <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_KEYDOWN"/> 消息將發送到窗口
+                <br/>
+                非系統鍵是在未按下 ALT 鍵時按下的鍵
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_KEYUP">
+            <summary>
+                當鬆開非系統鍵時, <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_KEYUP"/> 消息將發送窗口
+                <br/>
+                非系統鍵是在未按下 ALT 鍵時按下的鍵, 或在窗口具有鍵盤焦點時按下的鍵盤鍵
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_SYSKEYDOWN">
+            <summary>
+                當用戶按下 F10 鍵(啟用菜單欄) 或按住 ALT 鍵然後按下另一個鍵時, <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_SYSKEYDOWN"/> 消息將發送到窗口
+                <br/>
+                在這種情況下, 當前沒有窗口時也會觸發這種情況, <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_SYSKEYDOWN"/> 消息被發送到活動窗口
+                <br/>
+                接收消息的窗口可以通過檢查lParam參數中的上下文代碼來區分這兩種上下文
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_SYSKEYUP">
+            <summary>
+                當用戶釋放 F10 鍵 或按住 ALT 鍵然後鬆開另一個鍵時, <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_SYSKEYUP"/> 消息將發送到窗口
+                <br/>
+                在這種情況下, 當前沒有窗口時也會觸發這種情況, <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_SYSKEYUP"/> 消息被發送到活動窗口
+                <br/>
+                接收消息的窗口可以通過檢查lParam參數中的上下文代碼來區分這兩種上下文
+            </summary>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseNativeMethods">
+            <summary>
+                底層鼠標方法
+            </summary>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseNativeMethods.GetDoubleClickTime">
+            <summary>
+                <para>
+                    函數 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseNativeMethods.GetDoubleClickTime"/>
+                </para>
+                <para>
+                    是檢索鼠標的當前雙擊時間, 雙擊是連續兩次單擊鼠標按鈕,  第二次發生在第一次之後的指定時間內
+                </para>
+                <para>
+                    雙擊時間是雙擊的第一次和第二次單擊之間發生的最大毫秒數
+                </para>
+            </summary>
+            
+            <returns>
+                返回值指定當前雙擊時間, 以毫秒為單位
+            </returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseNativeMethods.GetCursorPos(Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Point@)">
+            <summary>
+                <para>
+                    函數 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseNativeMethods.GetCursorPos(Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Point@)"/>
+                </para>
+                <para>
+                    是找到當前鼠標的位置, 並返回一個 <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Point"/> 結構
+                </para>
+            </summary>
+            <param name="lpPoint">傳出<see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Point"/></param>
+            <returns></returns>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseStruct">
+            <summary>
+                <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseStruct" /> 包含有關鼠標輸入事件的信息
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseStruct.Point">
+            <summary>
+                指定一個 Point 結構, 該結構包含鼠標的 X 和 Y 坐標, 依照屏幕坐標去表示
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseStruct.MouseData">
+            <summary>
+                指定與消息關聯的信息
+            </summary>
+            
+            <remarks>
+                以下為可能出現的值:
+                <list type="bullet">
+                    <item>
+                        <description>0 - 無信息</description>
+                    </item>
+                    <item>
+                        <description>1 - X-按鈕1 點擊</description>
+                    </item>
+                    <item>
+                        <description>2 - X-按鈕2 點擊</description>
+                    </item>
+                    <item>
+                        <description>120 - 鼠標滾輪向前</description>
+                    </item>
+                    <item>
+                        <description>-120 - 鼠標滾輪向後</description>
+                    </item>
+                </list>
+            </remarks>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseStruct.Timestamp">
+            <summary>
+                在系統記號(System Ticks) 中返回與輸入關聯的時間戳
+            </summary>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Point">
+            <summary>
+                <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Point"/> 結構定義了一個點的 X 坐標和 Y 坐標
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Point.X">
+            <summary>
+                指定 X 坐標
+            </summary>
+        </member>
+        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Point.Y">
+            <summary>
+                指定 Y 坐標
+            </summary>
+        </member>
+        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.ThreadNativeMethods">
+            <summary>
+                底層內核窗口方法
+            </summary>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.ThreadNativeMethods.GetCurrentThreadId">
+            <summary>
+                檢索調用線程的非託管線程識別碼
+            </summary>
+            
+            <returns>線程識別碼</returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.ThreadNativeMethods.GetForegroundWindow">
+            <summary>
+                <para>
+                    檢索前台窗口(用戶當前正在使用的窗口) 的句柄
+                </para>
+                <para>
+                    系統為前台窗口創建的線程分配會比其他線程稍高的優先等級
+                </para>
+            </summary>
+            
+            <returns>窗口句柄</returns>
+        </member>
+        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.ThreadNativeMethods.GetWindowThreadProcessId(System.IntPtr,System.Int32@)">
+            <summary>
+                <para>
+                    檢索創建指定窗口的線程的識別碼
+                </para>
+                <para>
+                    以及創建窗口的進程的識別碼(可選)
+                </para>
+            </summary>
+            
+            <param name="handle">
+                窗口句柄
+            </param>
+            
+            <param name="processId">
+                <para>
+                    指向接收進程識別碼變量的指針
+                </para>
+                <para>
+                    如果此參數不為 NULL
+                </para>
+                <para>
+                    <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.ThreadNativeMethods.GetWindowThreadProcessId(System.IntPtr,System.Int32@)"/> 會將進程的識別碼複製到變量中, 否則不會
+                </para>
+            </param>
+            
+            <returns>
+                返回值是創建窗口的線程的識別碼
+            </returns>
+        </member>
         <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Code.Keycode">
             <summary>
                 所有鍵盤結構總匯
@@ -4830,1766 +6633,6 @@
                 如果 Key 被任何 HotKeySet 使用, 則使用多案例委託來調用各個 HotKeySet
             </summary>
             <param name="e"></param>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.FindWindow(System.String,System.String)">
-            <summary>
-                檢查窗口 (給其中一個參數即可, 另一個可為null)
-            </summary>
-            
-            <param name="lpClassName">
-                程序的名稱
-            </param>
-            
-            <param name="lpWindowName">
-                程序的視窗名稱
-            </param>
-            
-            <returns>
-                應用程式的句柄
-            </returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.FindWindowEx(System.IntPtr,System.IntPtr,System.String,System.String)">
-            <summary>
-                檢索類名和窗口名與指定字符串匹配的窗口的句柄
-                <para>
-                    該函數搜索子窗口, 從指定子窗口後面的窗口開始, 此函數不執行區分大小寫的搜索
-                </para>
-            </summary>
-            
-            <param name="hwndParent">
-                要搜索其子窗口的父窗口的句柄
-                <para>
-                    如果 <see href="hwndParent"/> 為NULL, 則該函數使用桌面窗口作為父窗口
-                </para>
-                <para>
-                    該函數在作為桌面子窗口的窗口中搜索
-                </para>
-                <para>
-                    如果 <see href="hwndParent"/> 是HWND_MESSAGE, 該函數搜索所有僅消息窗口
-                </para>
-            </param>
-            
-            <param name="hwndChildAfter">
-                子窗口的句柄
-                <para>
-                    搜索從 Z 順序中的下一個子窗口開始, 子窗口必須是 <see href="hwndParent"/> 的直接子窗口, 而不僅僅是後代窗口
-                </para>
-                <para>
-                    如果 <see href="hwndChildAfter"/> 為NULL, 則搜索從hwndParent的第一個子窗口開始
-                </para>
-                <para>
-                    如果 <see href="hwndChildAfter"/> 和 <see href="hwndChildAfter"/> 均為NULL, 則該函數將搜索所有頂級窗口和僅消息窗口
-                </para>
-            </param>
-            
-            <param name="lpszClass">
-                通過先前調用 RegisterClass 或 RegisterClassEx 函數創建的類名或類原子
-                <para>
-                    原子必須放在lpszClass的低位詞中, 高位字必須為零
-                </para>
-                <para>
-                    如果lpszClass是一個字符串, 它指定窗口類名
-                </para>
-                <para>
-                    類名可以是使用 RegisterClass 或 RegisterClassEx 註冊的任何名稱, 或任何預定義的控件類名稱, 也可以是MAKEINTATOM(0x8000)
-                </para>
-                <para>
-                    在後一種情況下, 0x8000 是菜單類的原子
-                </para>
-                <para>
-                    有關詳細信息, 請參閱本主題的備註部分
-                </para>
-            </param>
-            
-            <param name="lpszWindow">
-                窗口名稱 (窗口的標題), 如果此參數為NULL, 則所有窗口名稱都匹配
-            </param>
-            
-            <returns></returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.ShowWindow(System.IntPtr,System.Int32)">
-            <summary>
-                顯示窗口
-            </summary>
-            
-            <param name="hWnd">
-                窗口句柄
-            </param>
-            
-            <param name="nCmdShow">
-                ShowWindowCommands 方法 (用作不同呈現方式)
-            </param>
-            
-            <returns>
-            
-            </returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.SetForegroundWindow(System.IntPtr)">
-            <summary>
-                將指定視窗的執行緒帶入前景並啟動視窗
-                <para>
-                    鍵盤輸入會導向至視窗, 而使用者會變更各種視覺提示, 系統會將稍微較高的優先順序指派給建立前景視窗的執行緒, 而不是其他執行緒
-                </para>
-            </summary>
-            <param name="hWnd">
-                窗口的句柄
-            </param>
-            
-            <returns>
-                如果視窗帶至前景, 則傳回值為非零
-                <para>
-                    如果視窗未帶入前景, 則傳回值為零
-                </para>
-            </returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.ShowWindowAsync(System.IntPtr,System.Int32)">
-            <summary>
-            非同步顯示窗口
-            </summary>
-            
-            <param name="hWnd">
-                窗口句柄
-            </param>
-            
-            <param name="nCmdShow">
-                ShowWindowCommands 方法 (用作不同呈現方式)
-            </param>
-            <returns></returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.DestroyWindow(System.IntPtr)">
-            <summary>
-                銷毀窗口
-            </summary>
-            
-            <param name="hWnd">
-                窗口句柄
-            </param>
-            
-            <returns>
-            </returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.SetWindowPos(System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
-            <summary>
-                設定窗口位置或置頂
-            </summary>
-            
-            <param name="hWnd">
-                窗口的句柄
-            </param>
-            
-            <param name="hWndInsertAfter">
-                在 Z 順序中位於定位窗口之前的窗口句柄 -1至頂
-            </param>
-            
-            <param name="x">
-                窗口的x座標
-            </param>
-            
-            <param name="y">
-                窗口的y座標
-            </param>
-            
-            <param name="Width">
-                窗口的寬度
-            </param>
-            
-            <param name="Height">
-                窗口的高度
-            </param>
-            
-            <param name="flags">
-                
-            </param>
-            
-            <returns>
-                
-            </returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.BringWindowToTop(System.IntPtr)">
-            <summary>
-                設定窗口至頂
-            </summary>
-            
-            <param name="hWnd">
-                窗口的句柄
-            </param>
-            
-            <returns></returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.GetWindowRect(System.IntPtr,Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.RECT@)">
-            <summary>
-                獲取視窗四個點位的座標
-                <para>
-                    傳出一個結構, 給<see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.RECT"/>
-                </para>
-            </summary>
-            
-            <param name="hWnd">
-                窗口句柄
-            </param>
-            
-            <param name="lpRect">
-                傳出一個結構, 給<see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.RECT"/>
-            </param>
-            
-            <returns></returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.SendMessage(System.IntPtr,System.UInt32,System.UInt32,System.UInt32)">
-             <summary>
-                 將指定的消息發送到一個或多個窗口
-                 <para>
-                     <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.SendMessage(System.IntPtr,System.UInt32,System.UInt32,System.UInt32)"/> 函數調用指定窗口的窗口過程
-                 </para>
-                 <para>
-                     直到窗口過程處理完消息才返回
-                 </para>
-             </summary>
-             
-             <param name="hWnd">
-                 窗口的句柄
-             </param>
-             
-             <param name="Msg">
-                 要發布的消息
-             </param>
-             
-             <param name="wParam">
-                 附加消息特定信息
-             </param>
-            
-             <param name="lParam">
-                 附加消息特定信息
-             </param>
-             
-             <returns></returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.SendMessage(System.IntPtr,System.UInt32,System.IntPtr,System.IntPtr)">
-             <summary>
-                 同 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.SendMessage(System.IntPtr,System.UInt32,System.UInt32,System.UInt32)"/>
-             </summary>
-             
-             <param name="hWnd">
-                 窗口的句柄
-             </param>
-             
-             <param name="Msg">
-                 要發布的消息
-             </param>
-             
-             <param name="wParam">
-                 附加消息特定信息
-             </param>
-            
-             <param name="lParam">
-                 附加消息特定信息
-             </param>
-             <returns></returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.SendMessage(System.IntPtr,System.UInt32,System.IntPtr,System.String)">
-            <summary>
-                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Code.WMcode.WM_SETTEXT"/> 專用
-                <para>
-                    IParam 寫入文字
-                </para>
-                <para>
-                    <example>
-                        <br>IntPtr hWnd = WinUserNativeMethods.FindWindow(null, "未命名 - 記事本");</br>
-                        <br>IntPtr htextbox = WinUserNativeMethods.FindWindowEx(hWnd, IntPtr.Zero, "EDIT", null);</br>
-                        <br>IntPtr htextbox2 = WinUserNativeMethods.FindWindowEx(hWnd, htextbox, "EDIT", null); // 依據上次獲得的句柄, 可以得到下一個的句柄</br>
-                        <br>WinUserNativeMethods.SetForegroundWindow(hWnd);</br>
-                        <br>WinUserNativeMethods.SendMessage(htextbox, WMcode.WM_SETTEXT, IntPtr.Zero, txtNotepadText.Text);</br>
-                    </example>
-                </para>
-            
-            </summary>
-            <param name="hWnd"></param>
-            <param name="Msg"></param>
-            <param name="wParam"></param>
-            <param name="lParam">寫入的文字內容</param>
-            <returns></returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.PostMessage(System.IntPtr,System.UInt32,System.UInt32,System.UInt32)">
-             <summary>
-                 在與創建指定窗口的線程關聯的消息隊列中放置（發布）一條消息,
-                 <para>
-                     並在不等待線程處理該消息的情況下返回
-                 </para>
-             </summary>
-             
-             <param name="hWnd">
-                 窗口的句柄
-             </param>
-             
-             <param name="Msg">
-                 要發布的消息
-             </param>
-             
-             <param name="wParam">
-                 附加消息特定信息
-             </param>
-            
-             <param name="lParam">
-                 附加消息特定信息
-             </param>
-             
-             <returns></returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.PostMessage(System.IntPtr,System.UInt32,System.IntPtr,System.IntPtr)">
-             <summary>
-                 同 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.PostMessage(System.IntPtr,System.UInt32,System.UInt32,System.UInt32)"/>
-             </summary>
-             
-             <param name="hWnd">
-                 窗口的句柄
-             </param>
-             
-             <param name="Msg">
-                 要發布的消息
-             </param>
-             
-             <param name="wParam">
-                 附加消息特定信息
-             </param>
-            
-             <param name="lParam">
-                 附加消息特定信息
-             </param>
-             
-             <returns></returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.GetForegroundWindow">
-            <summary>
-                獲取前景窗口 (最上層窗口)
-            </summary>
-            
-            <returns>
-                窗口的句柄
-            </returns>
-        </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.RECT">
-            <summary>
-            應用程序的 最左, 最上, 最右, 最下的座標結構
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.RECT.Left">
-            <summary>
-            最左座標
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.RECT.Top">
-            <summary>
-            最上座標
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.RECT.Right">
-            <summary>
-            最右座標
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.RECT.Bottom">
-            <summary>
-            最下座標
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.IParamm.repeatCount">
-            <summary>
-                重複次數
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.IParamm.scanCode">
-            <summary>
-                鍵盤掃描碼
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.IParamm.extendedKey">
-            <summary>
-                擴展鍵
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.IParamm.prevKeyState">
-            <summary>
-                功能鍵狀態
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.IParamm.transitionState">
-            <summary>
-                過渡狀態
-            </summary>
-        </member>
-        <member name="P:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.IParamm.lParam">
-            <summary>
-                <para>
-                    <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.SendMessage(System.IntPtr,System.UInt32,System.UInt32,System.UInt32)"/>
-                </para>
-                <para>
-                    <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.WinUserNativeMethods.PostMessage(System.IntPtr,System.UInt32,System.UInt32,System.UInt32)"/>
-                </para>
-                的 IParam 參數 (第4個參數)
-            </summary>
-        </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardScript">
-            <summary>
-                底層鍵盤驅動事件
-            </summary>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardScript.GetBreakCode(Heptad.Dick.WinSystem.KeyboardMouse.Code.ScanCode)">
-            <summary>
-                斷開鍵盤掃描碼
-                <para>
-                    鍵盤掃描碼 + 0x80
-                </para>
-                <para>
-                    也稱為 BreakCode
-                </para>
-                <para>
-                    是對該鍵碼解除硬體設備的控制, 傳送後該鍵的功能將失效直到再次啟用
-                </para>
-            </summary>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardScript.keybd_event(System.Byte,System.Byte,System.Int32,System.Int32)">
-            <summary>
-                發送鍵盤事件
-            </summary>
-            
-            <param name="bVk" >
-                虛擬鍵碼
-            </param>
-            
-            <param name= "bScan" >
-                鍵盤掃描碼
-            </param>
-            
-            <param name= "dwFlags" >
-                請參照 <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Code.keyFlags"/>
-            </param>
-            
-            <param name= "dwExtraInfo">
-                與鍵盤相關的附加數據 (建議設置0)
-            </param>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardScript.VkKeyScan(System.Char)">
-            <summary>
-                將字符轉換為當前鍵盤對應的虛擬鍵代碼和 shift 狀態
-            </summary>
-            
-            <param name="ch">
-                要轉換為虛擬鍵代碼的字符
-            </param>
-            
-            <returns>
-                如果函數成功, 返回值的低位字節包含虛擬鍵碼, 高位字節包含移位狀態, 可以是以下標誌位的組合
-                <para>
-                    1 = 	按下任一 SHIFT 鍵
-                </para>
-                <para>
-                    2 =     按下任一 CTRL 鍵
-                </para>
-                <para>
-                    4 =     按下任一 ALT 鍵
-                </para>
-                <para>
-                    8 = 	半格鍵被按下
-                </para>
-                <para>
-                    16 =    保留（由鍵盤佈局驅動程序定義）
-                </para>
-                <para>
-                    32 =    保留（由鍵盤佈局驅動程序定義）
-                </para>
-            </returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardScript.keyInput(System.Byte,System.Byte,System.Int32)">
-            <summary>
-                按下或鬆開按鍵
-            </summary>
-            
-            <param name="keyName">
-                虛擬鍵碼
-            </param>
-            
-            <param name="ScanCode">
-                鍵盤掃描碼
-            </param>
-            
-            <param name="IsDown">
-                <list type="bullet">
-                    <item>
-                        <description>0 - 按下</description>
-                    </item>
-                    <item>
-                        <description>2 - 鬆開</description>
-                    </item>
-                </list>
-            </param>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardScript.keyPress(System.Byte[],System.Byte[])">
-            <summary>
-                按下多個按鍵並鬆開
-            </summary>
-            
-            <param name="keyNames">
-                虛擬鍵碼
-            </param>
-            
-            <param name="ScanCodes">
-                鍵盤掃描碼
-            </param>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardScript.keyStringInput(System.String)">
-            <summary>
-                字符串執行鍵盤操作
-            </summary>
-            
-            <param name="str">
-                字符串
-            </param>
-        </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseScript">
-            <summary>
-                底層滑鼠驅動事件
-            </summary>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseScript.mouse_event(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
-            <summary>
-                鼠標操作
-            </summary>
-            
-            <param name="dwFlags">
-                動作和點擊選項
-            </param>
-            
-            <param name="dx">
-                X 座標位置或變化
-            </param>
-            
-            <param name="dy">
-                Y座標位置或變化
-            </param>
-            
-            <param name="dwData">
-                滾輪移動
-                <list type="bullet">
-                    <item>
-                        <description>正值向前</description>
-                    </item>
-                    <item>
-                        <description>負值向後</description>
-                    </item>
-                </list>
-            </param>
-            
-            <param name="dwExtraInfo">
-                與鼠標相關的附加數據 (建議設置0
-            </param>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseScript.SetCursorPos(System.Int32,System.Int32)">
-            <summary>
-            鼠標移動
-            </summary>
-            
-            <param name="x">
-                移動到位的 X 座標
-            </param>
-            <param name="y">
-                移動到位的 Y 座標
-            </param>
-            
-            <returns>
-                本次執行的進程識別碼
-            </returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseScript.MouseClick(System.Int32,System.Int32,Heptad.Dick.WinSystem.KeyboardMouse.Code.MouseKeys)">
-            <summary>
-            移動並點擊
-            </summary>
-            
-            <param name="X">
-                X 座標
-            </param>
-            
-            <param name="Y">
-                Y 座標
-            </param>
-            
-            <param name="btn">
-                滑鼠按鍵, 參照 <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Code.MouseKeys"/>
-            </param>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseScript.Click(Heptad.Dick.WinSystem.KeyboardMouse.Code.MouseKeys)">
-            <summary>
-            不移動只點擊
-            </summary>
-            
-            <param name="btn">
-                滑鼠按鍵, 參照 <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Code.MouseKeys"/>
-            </param>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseScript.Scroll(System.Int32)">
-            <summary>
-            滑鼠滾動
-            </summary>
-            
-            <param name="values">
-                滾輪移動
-                <list type="bullet">
-                    <item>
-                        <description>正值向前</description>
-                    </item>
-                    <item>
-                        <description>負值向後</description>
-                    </item>
-                </list>
-            </param>
-        </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.AppMouseStruct">
-            <summary>
-                <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.AppMouseStruct" /> 的結構包含有關應用程序及鼠標輸入事件的信息
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.AppMouseStruct.Point">
-            <summary>
-                <para>
-                    指定一個 <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Point" /> 結構
-                </para>
-                <para>
-                    該結構包含光標的 X 和 Y 坐標, 以屏幕坐標表示
-                </para>
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.AppMouseStruct.MouseData_x86">
-            <summary>
-                指定與鼠標消息關聯的信息
-            </summary>
-            <remarks>
-                可能的值是:
-                <list type="bullet">
-                    <item>
-                        <description>0 - 無信息</description>
-                    </item>
-                    <item>
-                        <description> 1   - X-Button1 點擊</description>
-                    </item>
-                    <item>
-                        <description> 2   - X-Button2 點擊</description>
-                    </item>
-                    <item>
-                        <description> 120 - 鼠標向前</description>
-                    </item>
-                    <item>
-                        <description>-120 - 鼠標向後</description>
-                    </item>
-                </list>
-            </remarks>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.AppMouseStruct.ToMouseStruct">
-            <summary>
-                轉換當前 <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.AppMouseStruct" /> 變成一個 <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseStruct" />.
-            </summary>
-            <returns></returns>
-            <remarks>
-                <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.AppMouseStruct" /> 沒有時間戳, 因此在調用時會生成一個
-            </remarks>
-        </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.CallbackData">
-            <summary>
-                回調數據
-            </summary>
-        </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookIds">
-            <summary>
-                底層掛鉤碼
-                <para>
-                    winuser.h 掛鉤程序ID
-                </para>
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookIds.WH_MOUSE">
-            <summary>
-                安裝一個監視鼠標消息的程序, 詳情請看 user32 MouseProc
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookIds.WH_KEYBOARD">
-            <summary>
-                安裝一個監視鍵盤消息的程序, 詳情請看 user32 KeyboardProc
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookIds.WH_MOUSE_LL">
-            <summary>
-                <para>
-                    <b>Windows NT/2000/XP/Vista/7</b>
-                </para>
-                <para>
-                    安裝一個監控低級鼠標輸入事件的掛鉤程序
-                </para>
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookIds.WH_KEYBOARD_LL">
-            <summary>
-                <para>
-                    <b>Windows NT/2000/XP/Vista/7</b>
-                </para>
-                <para>
-                    安裝一個監視低級鍵盤輸入事件的掛鉤程序
-                </para>
-            </summary>
-        </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookNativeMethods">
-            <summary>
-                底層掛鉤方法
-            </summary>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookNativeMethods.CallNextHookEx(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)">
-            <summary>
-                <para>
-                    函數 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookNativeMethods.CallNextHookEx(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)"/> 是將掛鉤信息傳遞給當前掛鉤鏈中的下一個掛鉤過程
-                </para>
-                <para>
-                    鉤子過程可以在處理鉤子信息之前或之後調用此函數
-                </para>
-            </summary>
-            
-            <param name="idHook">
-                該參數被忽略
-            </param>
-            
-            <param name="nCode">
-                [in] 指定傳遞給當前鉤子過程的鉤子代碼
-            </param>
-            
-            <param name="wParam">
-                [in] 指定傳遞給當前掛鉤過程的 wParam 值
-            </param>
-            
-            <param name="lParam">
-                [in] 指定傳遞給當前掛鉤過程的 lParam 值
-            </param>
-            
-            <returns>該值由鏈中的下一個鉤子過程返回</returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookNativeMethods.SetWindowsHookEx(System.Int32,Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookProcedure,System.IntPtr,System.Int32)">
-            <summary>
-                <para>
-                    函數 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookNativeMethods.SetWindowsHookEx(System.Int32,Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookProcedure,System.IntPtr,System.Int32)"/> 是將應用程序定義的掛鉤過程安裝到掛鉤鏈中
-                </para>
-                <para>
-                    安裝一個掛鉤程序來監視系統中某些類型的事件
-                </para>
-                <para>
-                    這些事件與特定線程或與調用線程相同的桌面中的所有線程關聯
-                </para>
-            </summary>
-            
-            <param name="idHook">
-                <para>
-                    [in] 指定要安裝的掛鉤過程的類型, 此參數可以是以下值之一
-                </para>
-            </param>
-            
-            <param name="lpfn">
-                <para>
-                    [in] 指向鉤子過程的指針
-                </para>
-                <para>
-                    如果 dwThreadId 參數為零或指定由不同進程創建的線程的識別碼
-                </para>
-                <para>
-                    lpfn 參數必須指向動態鏈接庫 (DLL) 中的掛鉤過程
-                </para>
-                <para>
-                    否則, lpfn 可以指向與當前進程關聯的代碼中的掛鉤過程
-                </para>
-            </param>
-            
-            <param name="hMod">
-                <para>
-                    [in] 包含 lpfn 參數指向的鉤子過程的 DLL 句柄
-                </para>
-                 <para>
-                    如果 dwThreadId 參數指定由當前進程創建的線程並且掛鉤過程在與當前進程關聯的代碼內
-                </para>
-                 <para>
-                    則 hMod 參數必須設置為 NULL
-                </para>
-            </param>
-            
-            <param name="dwThreadId">
-                <para>
-                    [in] 指定要與掛鉤過程關聯的線程的識別碼
-                </para>
-                <para>
-                    如果此參數為零
-                </para>
-                <para>
-                    則掛鉤過程與在與調用線程相同的桌面上運行的所有現有線程相關聯
-                </para>
-            </param>
-            
-            <returns>
-                <para>
-                    如果函數成功, 返回值是鉤子過程的句柄
-                </para>
-                <para>
-                    如果函數失敗, 返回值為 NULL
-                </para>
-                <para>
-                    要獲取擴展錯誤信息, 請調用 GetLastError
-                </para>
-            </returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookNativeMethods.UnhookWindowsHookEx(System.IntPtr)">
-            <summary>
-                <para>
-                    函數 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookNativeMethods.UnhookWindowsHookEx(System.IntPtr)"/> 是刪除由 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookNativeMethods.SetWindowsHookEx(System.Int32,Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookProcedure,System.IntPtr,System.Int32)"/> 函數安裝在鉤子鏈中的鉤子過程
-                </para>
-            </summary>
-            
-            <param name="idHook">
-                <para>
-                    [in] 要卸下的掛鉤句柄, 該參數是之前調用 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookNativeMethods.SetWindowsHookEx(System.Int32,Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookProcedure,System.IntPtr,System.Int32)"/> 獲得的鉤子句柄
-                </para>
-            </param>
-            
-            <returns>
-                <para>
-                    如果函數成功, 則返回值非零
-                </para>
-                <para>
-                    如果函數失敗, 則返回值為零
-                </para>
-                <para>
-                    要獲取擴展錯誤信息, 請調用 GetLastError
-                </para>
-            </returns>
-        </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HookProcedure">
-            <summary>
-                <para>
-                    CallWndProc 掛鉤過程是與 SetWindowsHookEx 函數一起使用的應用程序定義或庫定義的回調函數
-                </para>
-                <para>
-                    HOOKPROC 類型定義了一個指向這個回調函數的指針
-                </para>
-                <para>
-                    CallWndProc 是應用程序定義或庫定義的函數名稱的佔位符
-                </para>
-            </summary>
-            
-            <param name="nCode">
-                <para>
-                    [in] 指定掛鉤過程是否必須處理消息
-                </para>
-                <para>
-                    如果 nCode 是 HC_ACTION, 則掛鉤過程必須處理該消息
-                </para>
-                <para>
-                    如果 nCode 小於零, 則掛鉤過程必須將消息傳遞給 CallNextHookEx 函數而不進行進一步處理
-                </para>
-                <para>
-                    而且必須返回 CallNextHookEx 返回的值
-                </para>
-            </param>
-            
-            <param name="wParam">
-                <para>
-                    [in] 指定消息是否由當前線程發送
-                </para>
-                <para>
-                    如果消息是由當前線程發送的, 則為非零; 否則為零
-                </para>
-            </param>
-            
-            <param name="lParam">
-                <para>
-                    [in] 指向包含有關消息的詳細信息的 CWPSTRUCT 結構的指針
-                </para>
-            </param>
-            
-            <returns>
-                <para>
-                    如果 nCode 小於零, 則掛鉤過程必須返回 CallNextHookEx 返回的值
-                </para>
-                <para>
-                    如果 nCode 大於等於 0, 強烈建議調用 CallNextHookEx 並返回它返回的值;
-                </para>
-                <para>
-                    否則, 其他安裝了 WH_CALLWNDPROC 鉤子的應用程序將不會收到鉤子通知, 因此可能會出現錯誤的行為
-                </para>
-                <para>
-                    如果掛鉤過程不調用 CallNextHookEx, 則返回值為零
-                </para>
-            </returns>
-        </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HotkeysNativeMethods">
-            <summary>
-                底層熱鍵方法
-            </summary>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HotkeysNativeMethods.RegisterHotKey(System.IntPtr,System.Int32,System.Int32,System.Int32)">
-            <summary>
-                定義系統範圍的熱鍵
-            </summary>
-            
-            <param name="hwnd">
-                <para>
-                    將接收由熱鍵生成的 WM_HOTKEY 消息的窗口句柄
-                </para>
-                <para>
-                    如果此參數為 <b>NULL</b>
-                </para>
-                <para>
-                    WM_HOTKEY 消息被發佈到調用線程的消息隊列中
-                </para>
-                <para>
-                    並且必須在消息循環中進行處理
-                </para>
-            </param>
-            
-            <param name="id">
-                <para>
-                    此為熱鍵的識別碼
-                </para>
-                <para>
-                    如果 hWnd 參數為 NULL
-                </para>
-                <para>
-                    則熱鍵與當前線程相關聯
-                </para>
-                <para>
-                    而不是與特定窗口相關聯
-                </para>
-                <para>
-                    如果已存在具有相同 hWnd 和 id 參數的熱鍵
-                </para>
-                <para>
-                    請參閱備註了解所採取的操作
-                </para>
-            </param>
-            
-            <param name="fsModifiers">
-                <para>
-                    為了生成 WM_HOTKEY 消息
-                </para>
-                <para>
-                    必須與 uVirtKey 參數指定的鍵組合按下的鍵
-                </para>
-                <para>
-                    fsModifiers 參數可以是以下值的組合
-                </para>
-            </param>
-            
-            <param name="vk">
-                <para>
-                    熱鍵的虛擬鍵代碼
-                </para>
-            </param>
-            
-            <returns>
-                <para>
-                    如果函數成功, 則返回值非零
-                </para>
-                <para>
-                    如果函數失敗, 則返回值為零
-                </para>
-                <para>
-                    要獲取擴展錯誤信息, 請調用 GetLastError
-                </para>
-            </returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.HotkeysNativeMethods.UnregisterHotKey(System.IntPtr,System.Int32)">
-             <summary>
-                 釋放調用線程先前註冊的熱鍵
-             </summary>
-             
-             <param name="hwnd">
-                 <para>
-                     與要釋放的熱鍵關聯的窗口句柄
-                 </para>
-                 <para>
-                     如果熱鍵與窗口無關, 則此參數應為 NULL
-                 </para>
-             </param>
-             
-             <param name="id">
-                 <para>
-                     要釋放的熱鍵的識別碼
-                 </para>
-             </param>
-            
-             <returns>
-                 <para>
-                     如果函數成功, 則返回值非零
-                 </para>
-                 <para>
-                     如果函數失敗, 則返回值為零
-                 </para>
-                 <para>
-                     要獲取擴展錯誤信息, 請調用 GetLastError
-                 </para>
-             </returns>
-        </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardHookStruct">
-            <summary>
-                <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardHookStruct"/> 結構包含有關低級鍵盤輸入事件的信息
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardHookStruct.VirtualKeyCode">
-            <summary>
-                指定一個虛擬鍵碼, 代碼必須是 1 到 254 範圍內的值
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardHookStruct.ScanCode">
-            <summary>
-                指定鍵盤的硬件掃描代碼
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardHookStruct.Flags">
-            <summary>
-                指定擴展鍵標誌、事件注入標誌、上下文代碼和轉換狀態標誌
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardHookStruct.Time">
-            <summary>
-                指定此消息的時間戳
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardHookStruct.ExtraInfo">
-            <summary>
-                指定與消息關聯的額外信息
-            </summary>
-        </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MapType">
-            <summary>
-                映射虛擬鍵 的 <see href="uCode"/> 類型
-                <para>給 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.MapVirtualKeyEx(System.Int32,System.Int32,System.IntPtr)"/>, <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.MapVirtualKey(System.Int32,System.Int32)"/> 使用</para>
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MapType.MAPVK_VK_TO_VSC">
-            <summary>
-                <para>
-                    uCode參數是一個虛擬鍵碼, 被轉換成掃描碼
-                </para>
-                <para>
-                    如果是不區分左右鍵的虛擬鍵碼, 則返回左邊的掃描碼
-                </para>
-                <para>
-                    如果轉換失敗, 該函數返回 0
-                </para>
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MapType.MAPVK_VSC_TO_VK">
-            <summary>
-                <para>
-                    uCode參數是一個掃描碼, 被翻譯成一個不區分左右鍵的虛擬鍵碼
-                </para>
-                <para>
-                    如果轉換失敗, 該函數返回 0
-                </para>
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MapType.MAPVK_VK_TO_CHAR">
-            <summary>
-                <para>
-                    uCode參數是一個虛擬鍵碼, 在返回值的低位字中被轉換成一個未移位的字符值
-                </para>
-                <para>
-                    通過設置返回值的最高位來指示死鍵(變音符號)
-                </para>
-                <para>
-                    如果轉換失敗, 該函數返回 0
-                </para>
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MapType.MAPVK_VSC_TO_VK_EX">
-            <summary>
-                <para>
-                    uCode參數是一個掃描碼, 被轉換成一個虛擬鍵碼, 用於區分左手鍵和右手鍵
-                </para>
-                <para>
-                    如果沒有轉換, 該函數返回 0
-                </para>
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MapType.MAPVK_VK_TO_VSC_EX">
-            <summary>
-                <para>
-                    uCode參數是一個虛擬鍵碼，並被轉換為掃描碼
-                </para>
-                <para>
-                    如果是不區分左右鍵的虛擬鍵碼, 則返回左手掃碼
-                </para>
-                <para>
-                    如果掃描碼是擴展掃描碼, 則uCode值的高字節可以包含0xe0或0xe1來指定擴展掃描碼
-                </para>
-                <para>
-                    如果沒有轉換, 該函數返回 0
-                </para>
-            </summary>
-        </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods">
-            <summary>
-                底層鍵盤方法
-            </summary>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.TryGetCharFromKeyboardState(System.Int32,System.Int32,System.Char[]@)">
-            <summary>
-                <para>
-                    在事先不知道掃描碼的情況下, 使用當前鍵盤佈局將虛擬鍵轉換為其等效字符
-                </para>
-            </summary>
-            
-            <param name="virtualKeyCode">
-                虛擬鍵碼
-            </param>
-            
-            <param name="fuState">
-                副狀態
-            </param>
-            
-            <param name="chars">
-                字節陣列
-            </param>
-            
-            <returns></returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.TryGetCharFromKeyboardState(System.Int32,System.Int32,System.Int32,System.Char[]@)">
-            <summary>
-                使用當前鍵盤佈局將虛擬鍵轉換為其等效字符
-            </summary>
-            
-            <param name="virtualKeyCode">
-                虛擬鍵碼
-            </param>
-            
-            <param name="scanCode">
-                鍵盤掃描碼
-            </param>
-            
-            <param name="fuState">
-                副狀態
-            </param>
-            
-            <param name="chars">
-                字節陣列
-            </param>
-            
-            <returns></returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.TryGetCharFromKeyboardState(System.Int32,System.Int32,System.Int32,System.IntPtr,System.Char[]@)">
-            <summary>
-                使用指定的鍵盤佈局將虛擬鍵轉換為其等效字符
-            </summary>
-            
-            <param name="virtualKeyCode">
-                虛擬鍵碼
-            </param>
-            
-            <param name="scanCode">
-                鍵盤掃描碼
-            </param>
-            
-            <param name="fuState">
-                副狀態
-            </param>
-            
-            <param name="dwhkl">
-                HKL
-            </param>
-            
-            <param name="chars">
-                字節陣列
-            </param>
-            
-            <returns></returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.GetActiveKeyboard">
-            <summary>
-                <para>
-                    獲取活動應用程序線程的輸入語言環境識別碼
-                </para>
-                <para>
-                    將此與 ToUnicodeEx 和 MapVirtualKeyEx 結合使用使 Windows 能夠根據為應用程序指定的鍵盤佈局正確轉換鍵
-                </para>
-            </summary>
-            
-            <returns>HKL</returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.ToAscii(System.Int32,System.Int32,System.Byte[],System.Byte[],System.Int32)">
-            <summary>
-                <para>
-                    <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.ToAscii(System.Int32,System.Int32,System.Byte[],System.Byte[],System.Int32)"/> 函數將指定的虛擬鍵代碼和鍵盤狀態轉換為相應的一個或多個字符
-                </para>
-                <para>
-                    該函數使用鍵盤佈局句柄標識的輸入語言和物理鍵盤佈局來轉換代碼
-                </para>
-            </summary>
-            
-            <param name="uVirtKey">
-                <para>
-                    [in] 指定要轉換的虛擬鍵碼
-                </para>
-            </param>
-            
-            <param name="uScanCode">
-                <para>
-                    [in] 指定要轉換的鍵盤掃描碼 
-                </para>
-                <para>
-                    如果鍵向上(未按下), 則設置此值的高位
-                </para>
-            </param>
-            
-            <param name="lpbKeyState">
-                <para>
-                    [in] 指向包含當前鍵盤狀態的 256 字節數組的指針
-                </para>
-                <para>
-                    數組中的每個元素(字節)都包含一個鍵的狀態
-                </para>
-                <para>
-                    如果設置了一個字節的高位, 則按鍵按下
-                </para>
-                <para>
-                    如果設置了低位, 則表示該鍵已打開, 在這個函數中
-                </para>
-                <para>
-                    只有 CAPS LOCK 鍵的切換位是相關的
-                </para>
-                <para>
-                    NUM LOCK 和 SCROLL LOCK 鍵將被忽略
-                </para>
-            </param>
-            
-            <param name="lpwTransKey">
-                <para>
-                    [out] 指向接收已轉換字符的緩衝區的指針
-                </para>
-            </param>
-            
-            <param name="fuState">
-                <para>
-                    [in] 指定菜單是否處於活動狀態, 如果菜單處於活動狀態, 此參數必須為 1; 否則為 0
-                </para>
-            </param>
-            
-            <returns>
-                <para>
-                    如果指定的鍵是死鍵, 則返回值為負, 否則它是以下值之一
-                </para>
-                <list type="number">
-                    <item>
-                        0 指定的虛擬鍵對鍵盤的當前狀態沒有轉換
-                    </item>
-                    <item>
-                        1 一個字符被複製到緩衝區
-                    </item>
-                    <item>
-                        <para>
-                            2 兩個字符被複製到緩衝區, 當存儲在鍵盤佈局中的死鍵字符
-                        </para>
-                        <para>
-                            (重音或變音符號), 無法與指定的虛擬鍵組合以形成單個字符時, 通常會發生這種情況
-                        </para>
-                    </item>
-                </list>
-            </returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.ToUnicodeEx(System.Int32,System.Int32,System.Byte[],System.Text.StringBuilder,System.Int32,System.Int32,System.IntPtr)">
-            <summary>
-                將指定的虛擬鍵代碼和鍵盤狀態轉換為相應的 Unicode 字符
-            </summary>
-            
-            <param name="wVirtKey">
-                <para>
-                    [in] 要轉換的虛擬鍵碼
-                </para>
-            </param>
-            
-            <param name="wScanCode">
-                <para>
-                    [in] 要轉換的鍵盤掃描碼, 如果鍵向上, 則設置此值的高位
-                </para>
-            </param>
-            
-            <param name="lpKeyState">
-                <para>
-                    [in, optional] 指向包含當前鍵盤狀態的 256 字節數組的指針
-                </para>
-                <para>
-                    數組中的每個元素(字節)都包含一個鍵的狀態
-                </para>
-                <para>
-                    如果設置了一個字節的高位, 則key為down
-                </para>
-            </param>
-            
-            <param name="pwszBuff">
-                <para>
-                    [out] 接收已轉換的 Unicode 字符或字符的緩衝區
-                </para>
-                <para>
-                    但即使變量名稱表明它是空的或終止的, 也可能會返回此緩衝區而不以空終止
-                </para>
-            </param>
-            
-            <param name="cchBuff">
-                <para>
-                    [in] <seealso href="pwszBuff"/> 參數指向的緩衝區的大小(以字符為單位)
-                </para>
-            </param>
-            
-            <param name="wFlags">
-                <para>
-                    [in] 函數的行為, 如果設置了 0, 則菜單處於活動狀態, 1 到 31 保留
-                </para>
-            </param>
-                
-            <param name="dwhkl">
-                <para>
-                    用於轉換指定代碼的輸入語言環境識別碼
-                </para>
-            </param>
-            
-            <returns>
-                -1 &lt;= return &lt;= n
-                <list type="bullet">
-                    <item>
-                        <para>
-                            -1    = 指定的虛擬鍵是死鍵字符(重音或變音符號)
-                        </para>
-                        <para>
-                            無論鍵盤佈局如何, 都會返回此值, 即使已鍵入多個字符並存儲在鍵盤狀態中也是如此
-                        </para>
-                        <para>
-                            即使使用 Unicode 鍵盤佈局, 該函數也會將死鍵字符的間距版本寫入 <see href="pwszBuff"/> 指定的緩衝區
-                        </para>
-                        <para>
-                            舉例, 函數寫入字符 SPACING ACUTE (0x00B4), 而不是字符 NON_SPACING ACUTE (0x0301)
-                        </para>
-                    </item>
-                    <item>
-                        <para>
-                            0    = 指定的虛擬鍵對鍵盤的當前狀態沒有轉換
-                        </para>
-                        <para>
-                            沒有任何內容寫入 <see href="pwszBuff"/> 指定的緩衝區
-                        </para>
-                    </item>
-                    <item>
-                        <para>
-                            1    = 一個字符被寫入 <see href="pwszBuff"/> 指定的緩衝區
-                        </para>
-                    </item>
-                    <item>
-                        <para>
-                            n    = 兩個或多個字符被寫入 <see href="pwszBuff"/> 指定的緩衝區
-                        </para>
-                        <para>
-                            最常見的原因是存儲在鍵盤佈局中的死鍵字符(重音或變音符號) 無法與指定的虛擬鍵組合形成單個字符
-                        </para>
-                        <para>
-                            但緩衝區可能包含比返回值指定的更多的字符
-                        </para>
-                        <para>
-                            發生這種情況時, 任何多餘的字符都是無效的, 請直接忽略
-                        </para>
-                        <para>
-                            
-                        </para>
-                    </item>
-                </list>
-            </returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.GetKeyboardState(System.Byte[])">
-            <summary>
-                <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.GetKeyboardState(System.Byte[])"/> 函數將 256 個虛擬鍵的狀態復製到指定緩衝區
-            </summary>
-            
-            <param name="pbKeyState">
-                [in] 指向包含鍵盤按鍵狀態的 256 字節數組的指針
-            </param>
-            
-            <returns>
-                <para>
-                    如果函數成功, 則返回值非零
-                </para>
-                <para>
-                    如果函數失敗, 則返回值為零
-                </para>
-                <para>
-                    要獲取擴展錯誤信息, 請調用 GetLastError
-                </para>
-            </returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.GetKeyState(System.Int32)">
-            <summary>
-                <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.GetKeyState(System.Int32)"/> 函數檢索指定虛擬鍵的狀態。狀態指定鍵是向上、向下還是切換
-                (開、關——每次按鍵時交替)
-            </summary>
-            
-            <param name="vKey">
-                <para>
-                    [in] 指定一個虛擬鍵
-                </para>
-                <para>
-                    如果所需的虛擬鍵是字母或數字(A 到 Z、a 到 z 或 0 到 9)
-                </para>
-                <para>
-                    <see href="nVirtKey"/> 必須設置為該字符的 ASCII 值
-                </para>
-                <para>
-                    對於其他鍵, 它必須是虛擬鍵碼
-                </para>
-            </param>
-            
-            <returns>
-                <para>
-                    返回值指定指定虛擬鍵的狀態
-                </para>
-                <para>
-                    如果高位為1, 則key為down; 否則key為up
-                </para>
-                <para>
-                    如果低位為1, 則鍵做出切換一個鍵, 如 CAPS LOCK 鍵, 如果打開就會被切換
-                </para>
-                <para>
-                    如果低位為0, 則該鍵關閉且未切換, 切換鍵時鍵盤上的切換鍵指示燈(如果有) 將亮起, 當鍵未切換時熄滅
-                </para>
-            </returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.MapVirtualKeyEx(System.Int32,System.Int32,System.IntPtr)">
-            <summary>
-                將虛擬鍵碼轉換(映射) 為掃描碼或字符值, 或將掃描碼轉換為虛擬鍵碼
-            </summary>
-            
-            <param name="uCode">
-                [in] 鍵的虛擬鍵碼或掃描碼, 該值的解釋方式取決於 <see href="uMapType"/> 參數的值
-            </param>
-            
-            <param name="uMapType">
-                [in] 要執行的轉換, 這個參數的值取決於 <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MapType"/> 參數的值
-            </param>
-            
-            <param name="dwhkl">
-                [in] 用於轉換指定代碼的輸入語言環境識別碼
-            </param>
-            
-            <returns>
-                虛擬鍵碼或鍵盤掃描碼
-            </returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.MapVirtualKey(System.Int32,System.Int32)">
-            <summary>
-                將虛擬鍵碼轉換(映射) 為掃描碼或字符值, 或將掃描碼轉換為虛擬鍵碼
-            </summary>
-            
-            <param name="uCode">
-                [in] 鍵的虛擬鍵碼或掃描碼, 該值的解釋方式取決於 <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MapType"/> 參數的值
-            </param>
-            
-            <param name="uMapType">
-                [in] 要執行的轉換, 這個參數的值取決於 <see href="uCode"/> 參數的值
-            </param>
-            
-            <returns>
-                虛擬鍵碼或鍵盤掃描碼
-            </returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.KeyboardNativeMethods.GetKeyboardLayout(System.Int32)">
-            <summary>
-                檢索指定線程的活動輸入區域設置識別碼 (以前稱鍵盤佈局)
-                如果 <see href="idThread"/> 參數為零, 則返回活動線程的輸入區域設置識別碼
-            </summary>
-            
-            <param name="dwLayout">
-                [in] 要查詢的線程的識別碼, 或者目前線程為 0
-            </param>
-            
-            <returns>
-                <para>
-                    返回值是線程的輸入語言環境識別碼
-                </para>
-                <para>
-                    低位字包含輸入語言的語言識別碼
-                </para>
-                <para>
-                    高位字包含鍵盤物理佈局的設備句柄
-                </para>
-            </returns>
-        </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages">
-            <summary>
-                底層鍵盤鼠標參數
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MOUSEMOVE">
-            <summary>
-                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MOUSEMOVE"/>
-                在鼠標移動時發送到窗口
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_LBUTTONDOWN">
-            <summary>
-                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_LBUTTONDOWN"/>
-                在用戶按下鼠標左鍵時發送到窗口
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_RBUTTONDOWN">
-            <summary>
-                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_RBUTTONDOWN"/>
-                在用戶按下鼠標右鍵時發送到窗口
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MBUTTONDOWN">
-            <summary>
-                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MBUTTONDOWN"/>
-                在用戶按下鼠標中鍵時發送到窗口
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_LBUTTONUP">
-            <summary>
-                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_LBUTTONUP"/>
-                在用戶鬆開鼠標左鍵時發送到窗口
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_RBUTTONUP">
-            <summary>
-                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_RBUTTONUP"/>
-                在用戶鬆開鼠標右鍵時發送到窗口
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MBUTTONUP">
-            <summary>
-                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_RBUTTONUP"/>
-                在用戶鬆開鼠標中鍵時發送到窗口
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_LBUTTONDBLCLK">
-            <summary>
-                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_LBUTTONDBLCLK"/>
-                在用戶雙擊鼠標左鍵時發送到窗口
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_RBUTTONDBLCLK">
-            <summary>
-                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_RBUTTONDBLCLK"/>
-                在用戶雙擊鼠標右鍵時發送到窗口
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MBUTTONDBLCLK">
-            <summary>
-                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_RBUTTONDOWN"/>
-                在用戶按鼠標右鍵時發送到窗口
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MOUSEWHEEL">
-            <summary>
-                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MOUSEWHEEL"/>
-                在用戶按鼠標滾輪時發送到窗口
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_XBUTTONDOWN">
-            <summary>
-                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_XBUTTONDOWN"/>
-                在用戶按下第一個或第二個 X 鼠標按鈕時發送到窗口
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_XBUTTONUP">
-            <summary>
-                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_XBUTTONUP"/>
-                在用戶鬆開第一個或第二個 X 鼠標按鈕時發送到窗口
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_XBUTTONDBLCLK">
-            <summary>
-                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_XBUTTONDBLCLK"/>
-                在用戶雙擊第一個或第二個 X 鼠標按鈕時發送到窗口
-            </summary>
-            
-            <remarks>
-                只有具有 CS_DBLCLKS 樣式的窗口才能接收 <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_XBUTTONDBLCLK"/> 的消息
-            </remarks>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MOUSEHWHEEL">
-            <summary>
-                <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_MOUSEHWHEEL"/>
-                在用戶的鼠標水平滾輪傾斜或旋轉時發送到窗口
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_KEYDOWN">
-            <summary>
-                當按下非系統鍵時, <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_KEYDOWN"/> 消息將發送到窗口
-                <br/>
-                非系統鍵是在未按下 ALT 鍵時按下的鍵
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_KEYUP">
-            <summary>
-                當鬆開非系統鍵時, <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_KEYUP"/> 消息將發送窗口
-                <br/>
-                非系統鍵是在未按下 ALT 鍵時按下的鍵, 或在窗口具有鍵盤焦點時按下的鍵盤鍵
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_SYSKEYDOWN">
-            <summary>
-                當用戶按下 F10 鍵(啟用菜單欄) 或按住 ALT 鍵然後按下另一個鍵時, <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_SYSKEYDOWN"/> 消息將發送到窗口
-                <br/>
-                在這種情況下, 當前沒有窗口時也會觸發這種情況, <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_SYSKEYDOWN"/> 消息被發送到活動窗口
-                <br/>
-                接收消息的窗口可以通過檢查lParam參數中的上下文代碼來區分這兩種上下文
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_SYSKEYUP">
-            <summary>
-                當用戶釋放 F10 鍵 或按住 ALT 鍵然後鬆開另一個鍵時, <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_SYSKEYUP"/> 消息將發送到窗口
-                <br/>
-                在這種情況下, 當前沒有窗口時也會觸發這種情況, <see cref="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Messages.WM_SYSKEYUP"/> 消息被發送到活動窗口
-                <br/>
-                接收消息的窗口可以通過檢查lParam參數中的上下文代碼來區分這兩種上下文
-            </summary>
-        </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseNativeMethods">
-            <summary>
-                底層鼠標方法
-            </summary>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseNativeMethods.GetDoubleClickTime">
-            <summary>
-                <para>
-                    函數 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseNativeMethods.GetDoubleClickTime"/>
-                </para>
-                <para>
-                    是檢索鼠標的當前雙擊時間, 雙擊是連續兩次單擊鼠標按鈕,  第二次發生在第一次之後的指定時間內
-                </para>
-                <para>
-                    雙擊時間是雙擊的第一次和第二次單擊之間發生的最大毫秒數
-                </para>
-            </summary>
-            
-            <returns>
-                返回值指定當前雙擊時間, 以毫秒為單位
-            </returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseNativeMethods.GetCursorPos(Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Point@)">
-            <summary>
-                <para>
-                    函數 <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseNativeMethods.GetCursorPos(Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Point@)"/>
-                </para>
-                <para>
-                    是找到當前鼠標的位置, 並返回一個 <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Point"/> 結構
-                </para>
-            </summary>
-            <param name="lpPoint">傳出<see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Point"/></param>
-            <returns></returns>
-        </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseStruct">
-            <summary>
-                <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseStruct" /> 包含有關鼠標輸入事件的信息
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseStruct.Point">
-            <summary>
-                指定一個 Point 結構, 該結構包含鼠標的 X 和 Y 坐標, 依照屏幕坐標去表示
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseStruct.MouseData">
-            <summary>
-                指定與消息關聯的信息
-            </summary>
-            
-            <remarks>
-                以下為可能出現的值:
-                <list type="bullet">
-                    <item>
-                        <description>0 - 無信息</description>
-                    </item>
-                    <item>
-                        <description>1 - X-按鈕1 點擊</description>
-                    </item>
-                    <item>
-                        <description>2 - X-按鈕2 點擊</description>
-                    </item>
-                    <item>
-                        <description>120 - 鼠標滾輪向前</description>
-                    </item>
-                    <item>
-                        <description>-120 - 鼠標滾輪向後</description>
-                    </item>
-                </list>
-            </remarks>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.MouseStruct.Timestamp">
-            <summary>
-                在系統記號(System Ticks) 中返回與輸入關聯的時間戳
-            </summary>
-        </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Point">
-            <summary>
-                <see cref="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Point"/> 結構定義了一個點的 X 坐標和 Y 坐標
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Point.X">
-            <summary>
-                指定 X 坐標
-            </summary>
-        </member>
-        <member name="F:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.Point.Y">
-            <summary>
-                指定 Y 坐標
-            </summary>
-        </member>
-        <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.ThreadNativeMethods">
-            <summary>
-                底層內核窗口方法
-            </summary>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.ThreadNativeMethods.GetCurrentThreadId">
-            <summary>
-                檢索調用線程的非託管線程識別碼
-            </summary>
-            
-            <returns>線程識別碼</returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.ThreadNativeMethods.GetForegroundWindow">
-            <summary>
-                <para>
-                    檢索前台窗口(用戶當前正在使用的窗口) 的句柄
-                </para>
-                <para>
-                    系統為前台窗口創建的線程分配會比其他線程稍高的優先等級
-                </para>
-            </summary>
-            
-            <returns>窗口句柄</returns>
-        </member>
-        <member name="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.ThreadNativeMethods.GetWindowThreadProcessId(System.IntPtr,System.Int32@)">
-            <summary>
-                <para>
-                    檢索創建指定窗口的線程的識別碼
-                </para>
-                <para>
-                    以及創建窗口的進程的識別碼(可選)
-                </para>
-            </summary>
-            
-            <param name="handle">
-                窗口句柄
-            </param>
-            
-            <param name="processId">
-                <para>
-                    指向接收進程識別碼變量的指針
-                </para>
-                <para>
-                    如果此參數不為 NULL
-                </para>
-                <para>
-                    <see cref="M:Heptad.Dick.WinSystem.KeyboardMouse.Win32Api.ThreadNativeMethods.GetWindowThreadProcessId(System.IntPtr,System.Int32@)"/> 會將進程的識別碼複製到變量中, 否則不會
-                </para>
-            </param>
-            
-            <returns>
-                返回值是創建窗口的線程的識別碼
-            </returns>
         </member>
         <member name="T:Heptad.Dick.WinSystem.KeyboardMouse.Combination">
             <summary>
