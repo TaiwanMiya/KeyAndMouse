@@ -48,13 +48,18 @@ namespace Console_Example
 				.FirstOrDefault();
 			if (setObject == null)
 				goto restart;
+			else if (setObject is Action<Action> @object)
+				@object(Exit);
+			else if (setObject is IKeyboardMouseEvents @event)
+            {
+				kmEvent = @event;
+			}
 		}
 
 		/// <summary>
 		///		Program exit.
 		/// </summary>
-		/// <param name="quit"></param>
-		private static void Exit(Action quit)
+		private static void Exit()
 		{
 			Environment.Exit(0);
 		}

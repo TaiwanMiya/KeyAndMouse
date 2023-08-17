@@ -13,7 +13,7 @@ namespace Console_Example
 			Console.WriteLine("Press ESC to exit");
 			Program.kmEvent.KeyPress += (sender, e) =>
 			{
-				Console.WriteLine(e.KeyChar);
+				action();
 			};
 		}
 	}
